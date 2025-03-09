@@ -1,0 +1,87 @@
+@use '../global/' as g;
+
+.c-blogs {
+  background-color: g.$blue01;
+  padding: 120px 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+
+    @include g.media(tab) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include g.media(sp) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &__contents {
+    margin-top: 16px;
+  }
+
+  &__title {
+    color: g.$yellow01;
+    text-underline-offset: 8px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__desc {
+    color: g.$white01;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+    color: g.$white01;
+    margin-block: 16px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: g.$yellow01;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+
+    &:hover {
+      &::after {
+        transform: translateX(5px);
+      }
+    }
+
+    &::after {
+      position: relative;
+      content: '';
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      background: url('/assets/imgs/icon-arrow-04.svg') no-repeat center center / contain;
+
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}

@@ -80,6 +80,12 @@ body {
       text-transform: capitalize;
       margin-bottom: 24px;
     }
+
+    &__02 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.6;
+    }
   }
 
 
@@ -92,6 +98,7 @@ body {
       margin-bottom: 24px;
     }
   }
+
   &-text {
     &--align-center01 {
       text-align: center;
