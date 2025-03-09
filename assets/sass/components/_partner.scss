@@ -3,6 +3,10 @@
 .c-partner {
   padding: 120px 0;
 
+  @include g.media(tab) {
+    padding: 80px 0;
+  } 
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

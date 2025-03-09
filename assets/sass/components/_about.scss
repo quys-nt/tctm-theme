@@ -1,14 +1,15 @@
 @use '../global/' as g;
 
 .c-about {
-  padding: 40px 0;
+  padding-block: 40px;
   background: linear-gradient(0deg, rgba(225, 186, 123, 0.5), rgba(225, 186, 123, 0.5)), url("/assets/imgs/logo-02.png");
   background-size: 40px 40px;
-
+  
   &__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
+
     @include g.media(sp) {
       grid-template-columns: 1fr;
     }
@@ -18,6 +19,7 @@
     @include g.media(tab) {
       display: inline-flex;
     }
+
     img {
       height: 100%;
       object-fit: cover;
@@ -30,6 +32,22 @@
     justify-content: center;
     background-color: g.$blue03;
     padding: 50px;
+
+    @include g.media(tab) {
+      padding: 40px;
+    }
+
+    @include g.media(sp) {
+      padding: 20px;
+    }
+
+    .c-btn__01 {
+      @include g.media(sp) {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
   }
 
   &__desc {

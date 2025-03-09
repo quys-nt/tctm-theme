@@ -3,12 +3,12 @@
 html {
   font-family: g.$font-family01;
   font-size: 62.5%;
-  font-weight: 500;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 body {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   color: g.$blue01;
 }
 
@@ -79,6 +79,10 @@ body {
       color: g.$yellow01;
       text-transform: capitalize;
       margin-bottom: 24px;
+
+      @include g.media(sp) {
+        line-height: 1.6;
+      }
     }
 
     &__02 {
@@ -104,6 +108,14 @@ body {
       text-align: center;
       max-width: 940px;
       margin-inline: auto;
+    }
+
+    &__white01 {
+      color: g.$white01;
+    }
+
+    &__yellow01 {
+      color: g.$yellow01;
     }
   }
 }

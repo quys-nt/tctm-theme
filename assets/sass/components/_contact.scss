@@ -1,0 +1,107 @@
+@use '../global/' as g;
+
+.c-contact {
+  background-color: g.$blue03;
+  padding-block: 120px;
+
+  @include g.media(tab) {
+    padding: 80px 0;
+  } 
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 384px 1fr;
+    gap: 24px;
+    align-items: center;
+    margin-top: 40px;
+
+    @include g.media(tab) {
+      grid-template-columns: 300px 1fr;
+    }
+
+    @include g.media(sp) {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__box {
+    &01 {
+      margin-top: 24px;
+    }
+
+    &02 {
+      margin-bottom: 24px;
+    }
+
+    &03 {
+      text-align: center;
+    }
+  }
+
+  &__group {
+    &01 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+
+      @include g.media(sp) {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+  }
+
+  &__item {
+    &02 {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid g.$yellow01;
+      }
+    }
+  }
+
+  &__title {
+    &02 {
+      color: g.$yellow01;
+      margin-bottom: 12px;
+    }
+
+    &03 {
+      color: g.$yellow01;
+      margin-bottom: 9px;
+    }
+  }
+
+  &__link {
+    &01 {
+      font-weight: 700;
+      color: g.$white01;
+
+      &:hover {
+        color: g.$yellow01;
+      }
+    }
+  }
+
+  &__form {
+    &01 {
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 20px;
+        border-radius: 4px;
+        background-color: g.$blue01;
+        color: g.$white01;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      textarea {
+        min-height: 140px;
+      }
+    }
+  }
+}
