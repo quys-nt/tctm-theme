@@ -1,0 +1,37 @@
+@use '../global/' as g;
+
+.c-partner {
+  padding: 120px 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+    @include g.media(tab) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include g.media(sp) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__desc {
+    margin-top: auto;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  img {
+    width: fit-content;
+  }
+}
