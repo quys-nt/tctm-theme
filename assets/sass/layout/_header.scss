@@ -7,27 +7,64 @@
   width: 100%;
   z-index: 1000;
 
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    z-index: 0;
+  }
+
+  &.is-fixed {
+    &::before {
+      background-color: #1723392e;
+      backdrop-filter: blur(20px);
+    }
+  }
+
   &__container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    max-width: 1200px;
+    max-width: 1220px;
     margin-inline: auto;
-    padding-block: 20px;
+    padding: 20px 10px;
+
+    @include g.media(sp) {
+      padding: 10px;
+    }
   }
 
   &__nav {
     @include g.media(sp) {
-      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      transform: translateX(100%);
+      background-color: g.$blue01;
+      transition: transform .3s ease-in-out;
     }
-    
+
+    &.is-active {
+      transform: translateX(0);
+    }
+
     ul {
       display: flex;
       align-items: center;
       gap: 16px;
       list-style: none;
       margin: 0;
+
+      @include g.media(sp) {
+        flex-direction: column;
+        padding: 40px 10px;
+        height: 100%;
+      }
     }
 
     a {
@@ -58,10 +95,79 @@
       border-radius: 4px;
       padding: 5px 10px;
       transition: background-color .3s ease-in-out;
-      
+
       &:hover {
         background-color: g.$yellow01;
       }
+
+      @include g.media(sp) {
+        border: 2px solid g.$yellow01;
+        border-radius: 4px;
+      }
+    }
+
+    &02 {
+      display: none !important;
+      position: relative;
+      font-size: 0;
+      display: inline;
+      width: 36px;
+      height: 36px;
+      background-color: g.$blue01;
+      border-radius: 50%;
+
+      @include g.media(sp) {
+        display: block !important;
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background-color: g.$white01;
+        top: 50%;
+        left: 50%;
+        transition: transform .3s ease-in-out;
+      }
+
+      &::before {
+        top: 14px;
+        transform: translate(-50%, -50%);
+      }
+
+      &::after {
+        top: 22px;
+        transform: translate(-50%, -50%);
+      }
+
+      &.is-active {
+        background-color: g.$yellow01;
+        &::before {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+          top: 50%;
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+
+    &03 {
+      span {
+        color: g.$white01;
+      }
+    }
+  }
+
+  &__logo {
+    @include g.media(sp) {
+      width: 100px;
+      height: 40px;
+      display: inline-flex;
     }
   }
 }

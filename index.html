@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8">
@@ -19,14 +19,14 @@
 </head>
 
 <body>
-  <header class="c-header">
+  <header class="c-header js-header">
     <div class="c-header__container">
       <div class="c-header__logo">
         <a href="#">
           <img src="/assets/imgs/logo-capital.png" alt="logo capital">
         </a>
       </div>
-      <nav class="c-header__nav">
+      <nav class="c-header__nav js-menu-header">
         <ul>
           <li class="active-page"><a href="/">Trang Chủ</a></li>
           <li><a href="/gioi-thieu">Giới Thiệu</a></li>
@@ -35,10 +35,11 @@
           <li><a href="/tin-tuc">Tin Tức</a></li>
           <li><a href="/tro-thanh-doi-tac">Trở Thành Đối Tác</a></li>
           <li><a href="/mua-hang-online">Mua Hàng Online</a></li>
-          <li><a href="#">EN/<span>JP</a></li>
+          <li><a href="#" class="c-header__btn03">EN/<span>VN</span></a></li>
           <li><a href="/lien-he" class="c-header__btn01">Liên Hệ</a></li>
         </ul>
       </nav>
+      <a href="#" class="c-header__btn02 js-btn-show-menu">button</a>
     </div>
   </header>
 
@@ -47,13 +48,22 @@
     <div class="c-mv">
       <div class="c-mv__slider js-slider-mv">
         <div>
-          <img src="/assets/imgs/img-mv-01.png" alt="img mv 01">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/assets/imgs/img-mv-01.png"> 
+            <img src="/assets/imgs/img-mv-01-sp.png" alt="img mv 01">
+          </picture>
         </div>
         <div>
-          <img src="/assets/imgs/img-mv-02.png" alt="img mv 02">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/assets/imgs/img-mv-02.png"> 
+            <img src="/assets/imgs/img-mv-02-sp.png" alt="img mv 02">
+          </picture>
         </div>
         <div>
-          <img src="/assets/imgs/img-mv-03.png" alt="img mv 03">
+          <picture>
+            <source media="(min-width: 768px)" srcset="/assets/imgs/img-mv-03.png"> 
+            <img src="/assets/imgs/img-mv-03-sp.png" alt="img mv 03">
+          </picture>
         </div>
       </div>
     </div>

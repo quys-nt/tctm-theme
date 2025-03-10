@@ -19,15 +19,28 @@
       &::before {
         content: unset;
       }
+
+      @include g.media(sp) {
+        width: 16px;
+        height: 40px;
+      }
     }
 
     &-prev {
       left: 36px;
+
+      @include g.media(sp) {
+        left: 10px;
+      }
     }
 
     &-next {
       right: 36px;
-      transform: translateX(-50%) rotate(180deg);
+      transform: translate(0, -50%) rotate(180deg);
+
+      @include g.media(sp) {
+        right: 10px;
+      }
     }
 
     &-dots {

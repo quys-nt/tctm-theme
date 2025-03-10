@@ -7,7 +7,7 @@ $(document).ready(function () {
       $(this).append('<div class="progress"></div>');
     });
   });
-  
+
   $slideMV.slick({
     dots: true,
     infinite: true,
@@ -21,9 +21,30 @@ $(document).ready(function () {
     pauseOnHover: false,
     pauseOnDotsHover: true,
   });
-  
+
   $slideMV.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
     $(".progress").removeClass("active"); // Xóa progress bar cũ
     $(".slick-dots li").eq(nextSlide).find(".progress").addClass("active"); // Kích hoạt progress bar mới
+  });
+
+  $(".js-btn-show-menu").click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass("is-active");
+    $(".js-menu-header").toggleClass("is-active");
+    $("body").css("overflow", "hidden");
+
+    if ($(".js-menu-header").hasClass("is-active")) {
+      $("body").css("overflow", "hidden");
+    } else {
+      $("body").css("overflow", "auto");
+    }
+  });
+  
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 400) {
+      $(".js-header").addClass("is-fixed");
+    } else {
+      $(".js-header").removeClass("is-fixed");
+    }
   });
 });

@@ -5,6 +5,10 @@
   padding-block: 60px;
   color: g.$white01;
 
+  @include g.media(sp) {
+    padding-block: 40px;
+  }
+
   &__container {
     max-width: 1340px;
     margin-inline: auto;
