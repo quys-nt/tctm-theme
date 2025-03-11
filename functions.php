@@ -117,3 +117,42 @@ function catch_that_image()
   }
   return $first_img;
 }
+
+function remove_category_base()
+{
+  add_filter('category_link', function ($link) {
+    return str_replace('/category/', '/', $link);
+  }, 10, 1);
+
+  add_action('init', function () {
+    global $wp_rewrite;
+    $wp_rewrite->extra_permastructs['category']['struct'] = '/%category%';
+    flush_rewrite_rules(); // Cập nhật lại quy tắc rewrite
+  });
+}
+remove_category_base();
+
+
+function get_current_language()
+{
+  $current_url = $_SERVER['REQUEST_URI'];
+
+  $is_localhost = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false);
+  $prefix = $is_localhost ? '/capital-local/' : '/';
+
+  $path = str_replace($prefix, '', $current_url);
+
+  if (preg_match('/^en\//', $path)) {
+    return array('short' => 'en', 'full' => 'en-US');
+  } else {
+    return array('short' => 'vi', 'full' => 'vi-VN');
+  }
+}
+
+function get_language_urls($slug)
+{
+  $base_url = home_url();
+  $en_url = $base_url . '/en/' . $slug;
+  $vi_url = $base_url . '/' . $slug;
+  return array('en' => $en_url, 'vi' => $vi_url);
+}

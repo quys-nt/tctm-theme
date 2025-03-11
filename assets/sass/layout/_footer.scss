@@ -1,9 +1,0 @@
-@use '../global/' as g;
-
-.l-footer {
-  padding: 10px 0 40px;
-  &__inner {
-    padding-top: 20px;
-    border-top: 4px solid g.$black01;
-  }
-}
