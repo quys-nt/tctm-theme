@@ -66,9 +66,31 @@ $(document).ready(function () {
   });
 
   $(document).on("click", (e) => {
-    if ( $showMenuFlag.hasClass("is-active") && !$subMenu.is(e.target) && !$showMenuFlag.is(e.target) && !$subMenu.has(e.target).length && !$showMenuFlag.has(e.target).length ) {
+    if ($showMenuFlag.hasClass("is-active") && !$subMenu.is(e.target) && !$showMenuFlag.is(e.target) && !$subMenu.has(e.target).length && !$showMenuFlag.has(e.target).length) {
       $showMenuFlag.removeClass("is-active");
     }
   });
 
+  $(".js-popup-show-menu").click(function () {
+    $(this).toggleClass("is-active");
+  });
+  $(document).on('click', function (event) {
+    if ($('.js-popup-show-menu').hasClass('is-active')) {
+      if (!$(event.target).closest('.js-popup-show-menu').length) {
+        $('.js-popup-show-menu').removeClass('is-active');
+      }
+    }
+  });
+
+  $(".js-popup-select-menu").click(function (e) {
+    e.preventDefault();
+    $(this).data("flag");
+    if($(this).data("flag") === "popup-01") {
+      $(".js-img-popup-01").show();
+      $(".js-img-popup-02").hide();
+    } else {
+      $(".js-img-popup-02").show();
+      $(".js-img-popup-01").hide();
+    }
+  });
 });

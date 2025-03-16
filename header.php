@@ -79,14 +79,27 @@ $vi_url = $urls['vi'];
 
 <div class="c-popup js-popup">
   <div class="c-popup__inner">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-popup-<?php echo $lang == "en" ? "02" : "01" ?>.png" alt="img popup">
-    <?php
-    if (is_user_logged_in()) {
-    ?>
-      <button class="c-popup__close js-btn-close-popup">close</button>
-    <?php
-    }
-    ?>
+    <img class="js-img-popup-01" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-popup-01.png" alt="img popup" style="display: none;">
+    <img class="js-img-popup-02" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-popup-02.png" alt="img popup">
+    <button class="c-popup__close js-btn-close-popup">close</button>
+  </div>
+  <div class="c-popup__select">
+    <div class="c-popup__flag js-popup-show-menu">
+      <img class="js-img-popup-01" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-vn.jpg" alt="flag vn" style="display: none;">
+      <img class="js-img-popup-02" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-en.jpg" alt="flag en">
+    </div>
+    <ul>
+      <li>
+        <a href="#" data-flag="popup-01" class="js-popup-select-menu">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-vn.jpg" alt="flag vn">
+        </a>
+      </li>
+      <li>
+        <a href="#" data-flag="popup-02" class="js-popup-select-menu">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-en.jpg" alt="flag en">
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
 
