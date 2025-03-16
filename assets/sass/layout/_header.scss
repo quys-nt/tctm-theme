@@ -28,7 +28,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    max-width: 1220px;
+    max-width: 1440px;
     margin-inline: auto;
     padding: 20px 10px;
 
@@ -76,6 +76,8 @@
     }
 
     li {
+      position: relative;
+
       &.active-page {
         a {
           color: g.$white01;
@@ -144,6 +146,7 @@
 
       &.is-active {
         background-color: g.$yellow01;
+
         &::before {
           top: 50%;
           transform: translate(-50%, -50%) rotate(45deg);
@@ -168,6 +171,46 @@
       width: 100px;
       height: 40px;
       display: inline-flex;
+    }
+  }
+
+  &__sub {
+    &-menu {
+      &-flag {
+        a.is-active {
+          &~ul {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+
+        ul {
+          position: absolute;
+          top: calc(100% + 10px);
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+          min-width: 110px;
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+
+          &.is-active {
+            visibility: visible;
+            opacity: 1;
+          }
+
+          a,
+          span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: g.$white01;
+            font-size: 14px;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }
