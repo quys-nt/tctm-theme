@@ -5,22 +5,28 @@
   <div class="c-mv">
     <div class="c-mv__slider js-slider-mv">
       <div>
-        <picture>
-          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-01.png">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-01-sp.png" alt="img mv 01">
-        </picture>
+        <a href="https://vn.bertazzoni.com/" target="_blank">
+          <picture>
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-01.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-01-sp.png" alt="img mv 01">
+          </picture>
+        </a>
       </div>
       <div>
-        <picture>
-          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-02.png">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-02-sp.png" alt="img mv 02">
-        </picture>
+        <a href="https://capitalmktgcomvn990.mbws.vn/" target="_blank">
+          <picture>
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-02.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-02-sp.png" alt="img mv 02">
+          </picture>
+        </a>
       </div>
       <div>
-        <picture>
-          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-03.png">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-03-sp.png" alt="img mv 03">
-        </picture>
+        <a href="https://capitalmktgcomvn702.mbws.vn/" target="_blank">
+          <picture>
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-03.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-03-sp.png" alt="img mv 03">
+          </picture>
+        </a>
       </div>
     </div>
   </div>
@@ -42,7 +48,7 @@
           </p>
           <div class="c-btn__group01">
             <a href="/gioi-thieu" class="c-btn__01 is-icon">Xem Chi Tiết</a>
-            <a href="/lien-he" class="c-btn__01">Liên Hệ</a>
+            <a href="#contact" class="c-btn__01">Liên Hệ</a>
           </div>
         </div>
       </div>
@@ -147,7 +153,7 @@
     </div>
   </section>
 
-  <section class="c-contact">
+  <section class="c-contact" id="contact">
     <div class="l-container">
       <div class="c-text--align-center01">
         <h2 class="c-title__01">Liên Hệ Với Chúng Tôi</h2>

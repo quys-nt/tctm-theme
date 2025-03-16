@@ -85,12 +85,47 @@ $(document).ready(function () {
   $(".js-popup-select-menu").click(function (e) {
     e.preventDefault();
     $(this).data("flag");
-    if($(this).data("flag") === "popup-01") {
+    if ($(this).data("flag") === "popup-01") {
       $(".js-img-popup-01").show();
       $(".js-img-popup-02").hide();
     } else {
       $(".js-img-popup-02").show();
       $(".js-img-popup-01").hide();
     }
+  });
+
+  $.smoothScroll = function (config) {
+    var c = $.extend(
+      {
+        speed: 1000,
+        noScrollClass: ".noScroll",
+        offset: 110,
+      },
+      config
+    );
+
+    $("a[href^='#']")
+      .not("a[href='#'], area[href='#'], " + c.noScrollClass)
+      .click(function (e) {
+        e.preventDefault();
+
+        var href = $(this).attr("href"),
+          targetElement = $(href);
+
+        if (targetElement.length) {
+          let position = targetElement.offset().top - c.offset;
+
+          if (/; CPU.*OS (?:3_2|4_0)/i.test(navigator.userAgent)) {
+            position -= $(window).scrollTop();
+          }
+
+          $("html, body").animate({ scrollTop: position }, c.speed, "swing");
+        }
+      });
+  };
+
+  $.smoothScroll({
+    speed: 800,
+    offset: 100,
   });
 });
