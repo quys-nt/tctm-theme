@@ -133,26 +133,35 @@ function remove_category_base()
 remove_category_base();
 
 
-function get_current_language()
-{
+// function get_current_language()
+// {
+//   $current_url = $_SERVER['REQUEST_URI'];
+
+//   $is_localhost = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false);
+//   $prefix = $is_localhost ? '/capital-local/' : '/';
+
+//   $path = str_replace($prefix, '', $current_url);
+
+//   if (preg_match('/^en\//', $path)) {
+//     return array('short' => 'en', 'full' => 'en-US');
+//   } else {
+//     return array('short' => 'vi', 'full' => 'vi-VN');
+//   }
+// }
+
+// function get_language_urls($slug)
+// {
+//   $base_url = home_url();
+//   $en_url = $base_url . '/en/' . $slug;
+//   $vi_url = $base_url . '/' . $slug;
+//   return array('en' => $en_url, 'vi' => $vi_url);
+// }
+
+function get_current_language() {
   $current_url = $_SERVER['REQUEST_URI'];
-
-  $is_localhost = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false);
-  $prefix = $is_localhost ? '/capital-local/' : '/';
-
-  $path = str_replace($prefix, '', $current_url);
-
-  if (preg_match('/^en\//', $path)) {
-    return array('short' => 'en', 'full' => 'en-US');
+  if (preg_match('/^\/en\//', $current_url)) {
+      return array('short' => 'en', 'full' => 'en-US');
   } else {
-    return array('short' => 'vi', 'full' => 'vi-VN');
+      return array('short' => 'vi', 'full' => 'vi-VN');
   }
-}
-
-function get_language_urls($slug)
-{
-  $base_url = home_url();
-  $en_url = $base_url . '/en/' . $slug;
-  $vi_url = $base_url . '/' . $slug;
-  return array('en' => $en_url, 'vi' => $vi_url);
 }

@@ -14,6 +14,17 @@ $urls = get_language_urls($slug);
 $en_url = $urls['en'];
 $vi_url = $urls['vi'];
 ?>
+<?php
+// $lang_data = get_current_language();
+// $lang = $lang_data['short'];
+// $lang_full = $lang_data['full'];
+
+// $base_url = home_url();
+// $current_path = trim($_SERVER['REQUEST_URI'], '/');
+// $slug = ($lang == 'en' ? str_replace('en/', '', $current_path) : $current_path);
+// $en_url = $base_url . '/en/' . $slug;
+// $vi_url = $base_url . '/' . $slug;
+?>
 
 <!DOCTYPE html>
 <html lang="<?php echo $lang; ?>">
@@ -88,27 +99,66 @@ $vi_url = $urls['vi'];
         </a>
       </div>
       <nav class="c-header__nav js-menu-header">
-        <ul>
-          <li class="active-page"><a href="<?php echo get_home_url(); ?>">Trang Chủ</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/gioi-thieu">Giới Thiệu</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/thuong-hieu">Thương Hiệu</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/ho-tro-va-dich-vu">Hổ trợ và Dịch Vụ</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/tin-tuc">Tin Tức</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/tro-thanh-doi-tac">Trở Thành Đối Tác</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/mua-hang-online">Mua Hàng Online</a></li>
-          <?php
-          if ($lang == "vi") {
-          ?>
-            <li><a href="<?php echo get_home_url(); ?>/en" class="c-header__btn03">EN/<span>VN</span></a></li>
-          <?php
-          } else {
-          ?>
-            <li><a href="<?php echo get_home_url(); ?>/" class="c-header__btn03"><span>EN</span>/VN</a></li>
-          <?php
-          }
-          ?>
-          <li><a href="<?php echo get_home_url(); ?>/lien-he" class="c-header__btn01">Liên Hệ</a></li>
-        </ul>
+        <?php if ($lang == "en") {
+        ?>
+          <ul>
+            <li class="active-page"><a href="<?php echo get_home_url(); ?>/en/">Home</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/about">About</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/brand">Brand</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/support-and-service">Support and Service</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/news">News</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/partner">Partner</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/e-commerce">E commerce</a></li>
+            <li class="c-header__sub-menu-flag">
+              <a href="#" class="c-header__btn03 js-show-menu-flag"><span>EN</span>/VN</a>
+              <ul>
+                <li>
+                  <a href="<?php echo get_home_url(); ?>" class="js-hide-menu-flag">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-vn.jpg" alt="flag Viet Nam">
+                    <span>Việt Nam</span>
+                  </a>
+                </li>
+                <li>
+                  <span class="js-hide-menu-flag">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-en.jpg" alt="flag Viet Nam">
+                    <span>English</span>
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <li><a href="<?php echo get_home_url(); ?>/en/contact" class="c-header__btn01">Contact</a></li>
+          </ul>
+        <?php
+        } else {
+        ?>
+          <ul>
+            <li class="active-page"><a href="<?php echo get_home_url(); ?>">Trang Chủ</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/gioi-thieu">Giới Thiệu</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/thuong-hieu">Thương Hiệu</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/ho-tro-va-dich-vu">Hổ trợ và Dịch Vụ</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/tin-tuc">Tin Tức</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/tro-thanh-doi-tac">Trở Thành Đối Tác</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/mua-hang-online">Mua Hàng Online</a></li>
+            <li class="c-header__sub-menu-flag">
+              <a href="#" class="c-header__btn03 js-show-menu-flag">EN/<span>VN</span></a>
+              <ul>
+                <li>
+                  <span class="js-hide-menu-flag">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-vn.jpg" alt="flag Viet Nam">
+                    <span>Việt Nam</span>
+                  </span>
+                </li>
+                <li>
+                  <a href="<?php echo get_home_url(); ?>/en/" class="js-hide-menu-flag">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-en.jpg" alt="flag Viet Nam">
+                    <span>English</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="<?php echo get_home_url(); ?>/lien-he" class="c-header__btn01">Liên Hệ</a></li>
+          </ul>
+        <?php } ?>
       </nav>
       <a href="#" class="c-header__btn02 js-btn-show-menu">button</a>
     </div>
