@@ -79,14 +79,14 @@ $vi_url = $urls['vi'];
 
 <div class="c-popup js-popup">
   <div class="c-popup__inner">
-    <img class="js-img-popup-01" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-popup-01.png" alt="img popup" style="display: none;">
-    <img class="js-img-popup-02" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-popup-02.png" alt="img popup">
+    <img class="js-img-popup-01 <?php echo $lang == "vi" ? "" : "u-d-none";?>" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-popup-01.png" alt="img popup">
+    <img class="js-img-popup-02 <?php echo $lang == "en" ? "" : "u-d-none";?>" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-popup-02.png" alt="img popup">
     <button class="c-popup__close js-btn-close-popup">close</button>
   </div>
   <div class="c-popup__select">
     <div class="c-popup__flag js-popup-show-menu">
-      <img class="js-img-popup-01" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-vn.jpg" alt="flag vn" style="display: none;">
-      <img class="js-img-popup-02" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-en.jpg" alt="flag en">
+      <img class="js-img-popup-01 <?php echo $lang == "vi" ? "" : "u-d-none";?>" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-vn.jpg" alt="flag vn">
+      <img class="js-img-popup-02 <?php echo $lang == "en" ? "" : "u-d-none";?>" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/flag-en.jpg" alt="flag en">
     </div>
     <ul>
       <li>

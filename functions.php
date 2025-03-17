@@ -157,11 +157,11 @@ function get_language_urls($slug)
   return array('en' => $en_url, 'vi' => $vi_url);
 }
 
-// function get_current_language() {
-//   $current_url = $_SERVER['REQUEST_URI'];
-//   if (preg_match('/^\/en\//', $current_url)) {
-//       return array('short' => 'en', 'full' => 'en-US');
-//   } else {
-//       return array('short' => 'vi', 'full' => 'vi-VN');
-//   }
-// }
+function get_current_language() {
+  $current_url = $_SERVER['REQUEST_URI'];
+  if (preg_match('/^\/en\//', $current_url)) {
+      return array('short' => 'en', 'full' => 'en-US');
+  } else {
+      return array('short' => 'vi', 'full' => 'vi-VN');
+  }
+}
