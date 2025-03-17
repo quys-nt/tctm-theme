@@ -1,2 +1,40 @@
+@use '../global/' as g;
+
 .c-breadcrumb {
+  background-color: g.$blue01;
+  padding: 106px 0 0;
+
+  &__inner {
+    border-top: 1px solid g.$white01;
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 20px 0;
+    list-style-type: none;
+    gap: 5px;
+
+    li {
+      &:not(:first-child) {
+        position: relative;
+        padding-left: 10px;
+
+        &::before {
+          content: '/';
+          position: absolute;
+          left: 0;
+          color: g.$white01;
+        }
+      }
+    }
+
+    a {
+      color: g.$white01;
+    }
+
+    span {
+      color: g.$yellow01;
+    }
+  }
 }

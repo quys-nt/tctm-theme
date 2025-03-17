@@ -177,10 +177,18 @@
   &__sub {
     &-menu {
       &-flag {
+        @include g.media(sp) {
+          text-align: center;
+        }
         a.is-active {
+
           &~ul {
             visibility: visible;
             opacity: 1;
+
+            @include g.media(sp) {
+              display: flex;
+            }
           }
         }
 
@@ -195,9 +203,15 @@
           opacity: 0;
           transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
 
-          &.is-active {
+          @include g.media(sp) {
+            position: relative;
+            top: auto;
+            left: auto;
+            display: none;
             visibility: visible;
             opacity: 1;
+            padding: 20px 0;
+            align-items: center;
           }
 
           a,
@@ -208,6 +222,10 @@
             color: g.$white01;
             font-size: 14px;
             cursor: pointer;
+
+            @include g.media(sp) {
+              justify-items: center;
+            }
           }
         }
       }

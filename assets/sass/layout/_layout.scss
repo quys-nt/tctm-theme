@@ -6,3 +6,9 @@
   margin-inline: auto;
   padding: 0 10px;
 }
+
+.u-d {
+  &-none {
+    display: none;
+  }
+}

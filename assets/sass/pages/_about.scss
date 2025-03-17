@@ -1,0 +1,137 @@
+@use '../global/' as g;
+
+.p-about {
+  &__misson {
+    background-color: g.$blue01;
+    color: g.$white01;
+    padding-block: 90px;
+
+    &--list {
+      display: grid;
+      grid-template-columns: repeat(3, 271px);
+      justify-content: space-between;
+      margin-top: 60px;
+
+      @include g.media(tab) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      @include g.media(sp) {
+        grid-template-columns: 271px;
+        justify-content: center;
+        gap: 40px;
+      }
+    }
+
+    &--item {
+      position: relative;
+      text-align: center;
+
+      @media screen and (min-width:1220px) {
+        &:not(:last-child) {
+          &::before {
+            position: absolute;
+            top: 10px;
+            left: calc(100% - 30px);
+            content: '';
+            width: 252px;
+            height: 59px;
+            background: url("/assets/imgs/icon-line-01.svg") no-repeat top left / contain;
+          }
+        }
+      }
+    }
+
+    &--sub {
+      &-title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 18px 0;
+      }
+    }
+
+    &--icon {
+      display: inline-flex;
+      width: 80px;
+      height: 80px;
+      margin-inline: auto;
+      padding: 8px;
+      border-radius: 4px;
+      background-color: g.$blue02;
+    }
+  }
+
+  &__vison {
+    padding: 95px 0;
+    background: url("/assets/imgs/bg-about-01.png") no-repeat top left / cover;
+
+    &--box {
+      display: grid;
+      grid-template-columns: 467px 520px;
+      align-items: center;
+      gap: 20px;
+      justify-content: space-between;
+
+      @include g.media(tab) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include g.media(sp) {
+        grid-template-columns: 1fr;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .c-title__01 {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+
+  &__review {
+    padding: 90px 0;
+    background-color: g.$blue01;
+
+    &--slider {
+      margin-top: 50px;
+
+      .slick-track {
+        margin-inline: -25px;
+      }
+    }
+
+    &--box {
+      &01 {
+        background-color: g.$white01;
+        padding: 30px;
+        border-radius: 10px;
+        margin-inline: 25px;
+      }
+
+      &02 {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 20px;
+        padding-left: 10px;
+        margin-bottom: 24px;
+      }
+    }
+
+    &--text {
+      &01 {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
+      &02 {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.6;
+        color: g.$yellow01;
+      }
+    }
+  }
+}
