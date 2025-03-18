@@ -27,6 +27,32 @@ $(document).ready(function () {
     $(".slick-dots li").eq(nextSlide).find(".progress").addClass("active"); // Kích hoạt progress bar mới
   });
 
+  $('.js-slider-review').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
   $(".js-btn-show-menu").click(function (e) {
     e.preventDefault();
     $(this).toggleClass("is-active");
@@ -41,7 +67,7 @@ $(document).ready(function () {
   });
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 400) {
+    if ($(this).scrollTop() > 100) {
       $(".js-header").addClass("is-fixed");
     } else {
       $(".js-header").removeClass("is-fixed");

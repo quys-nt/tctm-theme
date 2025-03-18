@@ -108,7 +108,7 @@ $vi_url = $urls['vi'];
     <div class="c-header__container">
       <div class="c-header__logo">
         <a href="<?php echo get_home_url(); ?>">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-capital.png" alt="logo capital">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-capital.svg" alt="logo capital">
         </a>
       </div>
       <nav class="c-header__nav js-menu-header">

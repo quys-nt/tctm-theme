@@ -118,27 +118,31 @@ function catch_that_image()
   return $first_img;
 }
 
-function remove_category_base()
+function custom_rewrite_rules()
 {
-  add_filter('category_link', function ($link) {
-    return str_replace('/category/', '/', $link);
-  }, 10, 1);
+  // Mảng chứa các slug và page_id tương ứng
+  $pages = array(
+    'about'       => 65,
+  );
 
-  add_action('init', function () {
-    global $wp_rewrite;
-    $wp_rewrite->extra_permastructs['category']['struct'] = '/%category%';
-    flush_rewrite_rules(); // Cập nhật lại quy tắc rewrite
-  });
+  foreach ($pages as $slug => $page_id) {
+    if (get_post_status($page_id) && get_post_type($page_id) === 'page') {
+      add_rewrite_rule(
+        "^en/{$slug}/?$",
+        "index.php?page_id=$page_id",
+        'top'
+      );
+    }
+  }
 }
-remove_category_base();
-
+add_action('init', 'custom_rewrite_rules');
 
 function get_current_language()
 {
   $current_url = $_SERVER['REQUEST_URI'];
 
   $is_localhost = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false);
-  $prefix = $is_localhost ? '/capital-local/' : '/';
+  $prefix = $is_localhost ? '/web-sport.local/' : '/';
 
   $path = str_replace($prefix, '', $current_url);
 
@@ -157,11 +161,11 @@ function get_language_urls($slug)
   return array('en' => $en_url, 'vi' => $vi_url);
 }
 
-function get_current_language() {
-  $current_url = $_SERVER['REQUEST_URI'];
-  if (preg_match('/^\/en\//', $current_url)) {
-      return array('short' => 'en', 'full' => 'en-US');
-  } else {
-      return array('short' => 'vi', 'full' => 'vi-VN');
-  }
-}
+// function get_current_language() {
+//   $current_url = $_SERVER['REQUEST_URI'];
+//   if (preg_match('/^\/en\//', $current_url)) {
+//       return array('short' => 'en', 'full' => 'en-US');
+//   } else {
+//       return array('short' => 'vi', 'full' => 'vi-VN');
+//   }
+// }

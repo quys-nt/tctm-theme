@@ -86,72 +86,35 @@
     </div>
   </section>
 
-  <section class="c-blogs">
-    <div class="l-container">
-      <div class="c-text--align-center01">
-        <h2 class="c-title__01">Tin tức</h2>
-      </div>
-      <div class="c-blogs__inner">
-        <div class="c-blogs__item">
-          <div class="c-blogs__img">
-            <a href="#">
-              <img
-                src="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4"
-                alt="title blogs" loading="lazy">
-            </a>
-          </div>
-          <div class="c-blogs__contents">
-            <a href="#">
-              <h3 class="c-title__02 c-blogs__title">Lorem Ipsum is simply dummy</h3>
-            </a>
-            <p class="c-blogs__desc">
-              Welcome to Burger Bliss, where we take your cravings to a whole new level! Our mouthwatering burgers are
-              made from 100% beef and are served on freshly baked buns.
-            </p>
-            <a href="#" class="c-blogs__link">Xem Thêm</a>
-          </div>
+  <?php
+  $showpost = false;
+  if ($showpost) {
+  ?>
+    <section class="c-blogs">
+      <div class="l-container">
+        <div class="c-text--align-center01">
+          <h2 class="c-title__01">Tin tức</h2>
         </div>
-        <div class="c-blogs__item">
-          <div class="c-blogs__img">
-            <a href="#">
-              <img
-                src="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4"
-                alt="title blogs" loading="lazy">
-            </a>
-          </div>
-          <div class="c-blogs__contents">
-            <a href="#">
-              <h3 class="c-title__02 c-blogs__title">Lorem Ipsum is simply dummy</h3>
-            </a>
-            <p class="c-blogs__desc">
-              Welcome to Burger Bliss, where we take your cravings to a whole new level! Our mouthwatering burgers are
-              made from 100% beef and are served on freshly baked buns.
-            </p>
-            <a href="#" class="c-blogs__link">Xem Thêm</a>
-          </div>
-        </div>
-        <div class="c-blogs__item">
-          <div class="c-blogs__img">
-            <a href="#">
-              <img
-                src="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4"
-                alt="title blogs" loading="lazy">
-            </a>
-          </div>
-          <div class="c-blogs__contents">
-            <a href="#">
-              <h3 class="c-title__02 c-blogs__title">Lorem Ipsum is simply dummy</h3>
-            </a>
-            <p class="c-blogs__desc">
-              Welcome to Burger Bliss, where we take your cravings to a whole new level! Our mouthwatering burgers are
-              made from 100% beef and are served on freshly baked buns.
-            </p>
-            <a href="#" class="c-blogs__link">Xem Thêm</a>
-          </div>
+        <div class="c-blogs__inner">
+          <?php
+          $args = array(
+            'post_type' => 'post',
+            'category_name' => 'tin-tuc',
+            'posts_per_page' => 3,
+          );
+          $blogs = new WP_Query($args);
+          if ($blogs->have_posts()) :
+            while ($blogs->have_posts()) : $blogs->the_post();
+              get_template_part('template-parts/post', get_post_format());
+            endwhile;
+          endif;
+          wp_reset_postdata(); ?>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  <?php
+  }
+  ?>
 
   <section class="c-contact" id="contact">
     <div class="l-container">

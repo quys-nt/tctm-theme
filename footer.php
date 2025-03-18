@@ -31,7 +31,7 @@ $vi_url = $urls['vi'];
     <div class="c-footer__group01">
       <div class="c-footer__item01">
         <a href="<?php echo get_template_directory_uri(); ?>">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-capital.png" alt="logo capital">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-capital.svg" alt="logo capital">
         </a>
         <?php if ($lang == 'en') { ?>
           <p class="c-footer__text01">
