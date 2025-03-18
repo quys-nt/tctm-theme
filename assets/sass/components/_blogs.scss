@@ -31,8 +31,11 @@
   }
 
   &__img {
-    position: relative;
-    overflow: hidden;
+    a {
+      display: inline-flex;
+      position: relative;
+      overflow: hidden;
+    }
 
     img {
       transition: transform 0.3s ease-in-out;
