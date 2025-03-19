@@ -4,6 +4,14 @@
   background-color: g.$blue01;
   padding: 106px 0 0;
 
+  @include g.media(tab) {
+    padding-top: 86px;
+  }
+
+  @include g.media(sp) {
+    padding-top: 60px;
+  }
+
   &__inner {
     border-top: 1px solid g.$white01;
   }

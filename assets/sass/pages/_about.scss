@@ -92,13 +92,69 @@
 
   &__review {
     padding: 90px 0;
+    overflow-x: hidden;
     background-color: g.$blue01;
 
     &--slider {
       margin-top: 50px;
 
-      .slick-track {
+      .slick-list {
         margin-inline: -25px;
+
+        @include g.media(tab) {
+          margin-inline: -10px;
+        }
+      }
+
+      .slick-slide {
+        margin-inline: 25px;
+
+        @include g.media(tab) {
+          margin-inline: 10px;
+        }
+      }
+
+      .slick-dots {
+        position: static;
+        margin-top: 60px;
+
+        @include g.media(sp) {
+          margin-top: 20px;
+        }
+
+        li,button {
+          width: 15px;
+          height: 15px;
+
+          @include g.media(sp) {
+            width: 8px;
+            height: 8px;
+          }
+        }
+
+        button {
+          display: inline-flex;
+          border-radius: 50px;
+          background-color: g.$white01;
+          transition: width 0.3s ease-in-out;
+
+          &::before {
+            content: unset;
+          }
+        }
+
+        li {
+          transition: width 0.3s ease-in-out;
+
+          &.slick-active {
+            width: 45px;
+
+            button {
+              background-color: g.$yellow01;
+              width: 45px;
+            }
+          }
+        }
       }
     }
 
@@ -107,7 +163,7 @@
         background-color: g.$white01;
         padding: 30px;
         border-radius: 10px;
-        margin-inline: 25px;
+        // margin-inline: 25px;
       }
 
       &02 {

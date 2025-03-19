@@ -33,6 +33,24 @@ $(document).ready(function () {
     slidesToScroll: 3,
     arrows: false,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   $(".js-btn-show-menu").click(function (e) {
