@@ -35,7 +35,7 @@ $vi_url = $urls['vi'];
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title><?php bloginfo('name'); ?></title>
+  <title><?php echo wp_get_document_title(); ?></title>
   <meta name="title" content="<?php echo wp_get_document_title(); ?> | Blogs coffee, coffee làm việc, quán coffee đẹp...">
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <!-- ogp -->
@@ -77,7 +77,7 @@ $vi_url = $urls['vi'];
   <?php wp_head(); ?>
 </head>
 
-<div class="c-popup js-popup">
+<!-- <div class="c-popup js-popup">
   <div class="c-popup__inner">
     <img class="js-img-popup-01 <?php echo $lang == "vi" ? "" : "u-d-none";?>" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-popup-01.png" alt="img popup">
     <img class="js-img-popup-02 <?php echo $lang == "en" ? "" : "u-d-none";?>" src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-popup-02.png" alt="img popup">
@@ -101,7 +101,7 @@ $vi_url = $urls['vi'];
       </li>
     </ul>
   </div>
-</div>
+</div> -->
 
 <body <?php body_class(); ?>>
   <header class="c-header js-header">

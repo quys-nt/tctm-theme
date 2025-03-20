@@ -1,11 +1,11 @@
 <?php
-add_theme_support('menus');
+
 function theme_shop_sport_setup()
 {
-  // Add support for various theme features
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
   add_theme_support('custom-logo');
+  add_theme_support('menus');
   add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
 }
 add_action('after_setup_theme', 'theme_shop_sport_setup');
@@ -15,9 +15,6 @@ function theme_shop_sport_enqueue_styles()
   wp_enqueue_style('theme-shop-sport-style', get_stylesheet_uri());
 }
 add_action('wp_enqueue_scripts', 'theme_shop_sport_enqueue_styles');
-
-
-
 
 function sb_get_current_url()
 {
@@ -137,6 +134,90 @@ function custom_rewrite_rules()
   }
 }
 add_action('init', 'custom_rewrite_rules');
+
+function sb_get_sub_cat()
+{
+  if (get_the_category()) {
+    $categories = get_the_category();
+    foreach ($categories as $key => $category) {
+      if ($key == 1) {
+        echo ', ';
+      }
+      echo '<span>' . $category->name . '</span>';
+    }
+  }
+}
+function create_product_post_type()
+{
+  $labels = array(
+    'name'               => 'Products',              // Tên chung của post type
+    'singular_name'      => 'Product',              // Tên đơn số
+    'menu_name'          => 'Products',             // Tên hiển thị trên menu
+    'name_admin_bar'     => 'Product',              // Tên trên thanh admin bar
+    'add_new'            => 'Add New',              // Nút thêm mới
+    'add_new_item'       => 'Add New Product',      // Tiêu đề khi thêm sản phẩm mới
+    'new_item'           => 'New Product',          // Tên mục mới
+    'edit_item'          => 'Edit Product',         // Chỉnh sửa sản phẩm
+    'view_item'          => 'View Product',         // Xem sản phẩm
+    'all_items'          => 'All Products',         // Tất cả sản phẩm
+    'search_items'       => 'Search Products',      // Tìm kiếm sản phẩm
+    'not_found'          => 'No products found.',   // Không tìm thấy sản phẩm
+    'not_found_in_trash' => 'No products found in Trash.' // Không tìm thấy trong thùng rác
+  );
+
+  $args = array(
+    'labels'             => $labels,               // Gán nhãn ở trên
+    'public'             => true,                  // Công khai để truy cập
+    'publicly_queryable' => true,                  // Có thể truy vấn qua URL
+    'show_ui'            => true,                  // Hiển thị giao diện quản trị
+    'show_in_menu'       => true,                  // Hiển thị trong menu admin
+    'query_var'          => true,                  // Cho phép truy vấn
+    'rewrite'            => array('slug' => 'san-phan'), // Slug URL là "product"
+    'capability_type'    => 'post',                // Quyền giống như bài viết
+    'has_archive'        => true,                  // Có trang lưu trữ
+    'hierarchical'       => false,                 // Không phân cấp (giống bài viết, không giống trang)
+    'menu_position'      => null,                  // Vị trí menu mặc định
+    'supports'           => array('title', 'editor', 'thumbnail', 'excerpt'), // Hỗ trợ các tính năng
+    'menu_icon'          => 'dashicons-cart',
+  );
+
+  register_post_type('product', $args);            // Đăng ký post type "product"
+}
+add_action('init', 'create_product_post_type');      // Gắn hàm vào hook "init"
+
+function create_product_taxonomy()
+{
+  $labels = array(
+    'name'              => 'Product Categories',        // Tên chung của taxonomy
+    'singular_name'     => 'Product Category',         // Tên đơn số
+    'search_items'      => 'Search Product Categories', // Tìm kiếm danh mục
+    'all_items'         => 'All Product Categories',   // Tất cả danh mục
+    'parent_item'       => 'Parent Product Category',  // Danh mục cha
+    'parent_item_colon' => 'Parent Product Category:', // Danh mục cha (có dấu hai chấm)
+    'edit_item'         => 'Edit Product Category',    // Chỉnh sửa danh mục
+    'update_item'       => 'Update Product Category',  // Cập nhật danh mục
+    'add_new_item'      => 'Add New Product Category', // Thêm danh mục mới
+    'new_item_name'     => 'New Product Category Name', // Tên danh mục mới
+    'menu_name'         => 'Product Categories',       // Tên hiển thị trên menu
+  );
+
+  $args = array(
+    'hierarchical'      => true,                       // Phân cấp giống danh mục (có thể có cha-con)
+    'labels'            => $labels,                    // Gán nhãn ở trên
+    'show_ui'           => true,                       // Hiển thị giao diện quản trị
+    'show_admin_column' => true,                       // Hiển thị cột trong bảng sản phẩm
+    'query_var'         => true,                       // Cho phép truy vấn
+    'rewrite'           => array('slug' => 'danh-muc'), // Slug URL là "product-category"
+  );
+
+  register_taxonomy('product_category', array('product'), $args); // Đăng ký taxonomy và gắn với "product"
+}
+add_action('init', 'create_product_taxonomy');  
+                     // Gắn hàm vào hook "init"
+function reset_rewrite_rules() {
+  flush_rewrite_rules();
+}
+add_action('init', 'reset_rewrite_rules');
 
 function get_current_language()
 {

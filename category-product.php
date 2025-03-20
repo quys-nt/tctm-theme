@@ -1,14 +1,12 @@
 <?php get_header(); ?>
 
-
-
 <main>
   <div class="c-breadcrumb">
     <div class="c-breadcrumb__inner">
       <nav class="l-container">
         <ul>
           <li><a href="/">Trang Chủ</a></li>
-          <li><span><?php single_cat_title(); ?></span></li>
+          <li><span><?php the_title(); ?></span></li>
         </ul>
       </nav>
     </div>
@@ -17,9 +15,9 @@
   <section class="p-archive__cats">
     <div class="p-archive__container">
       <div class="p-archive__cats--box01">
-        <h1 class="c-title__01"><?php single_cat_title(); ?></h1>
+        <h1 class="c-title__01"><?php the_title(); ?></h1>
         <div class="c-desc__01 p-archive__cats--desc01">
-          <?php the_archive_description();?>
+          <?php the_archive_description(); ?>
         </div>
       </div>
 
