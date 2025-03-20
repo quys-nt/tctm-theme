@@ -5,7 +5,7 @@
       <nav class="l-container">
         <ul>
           <li><a href="<?php echo get_home_url(); ?>">Trang Chủ</a></li>
-          <li><span>Giới Thiệu</span></li>
+          <li><span>Giới thiệu Công ty</span></li>
         </ul>
       </nav>
     </div>

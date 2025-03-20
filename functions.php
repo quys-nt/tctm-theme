@@ -121,8 +121,9 @@ function catch_that_image()
 function custom_rewrite_rules()
 {
   $pages = array(
-    'about'       => 65,
-    'partner-with-us'       => 71,
+    'about'       => 75,
+    'contact'       => 81,
+    'partner-with-us'       => 77,
   );
 
   foreach ($pages as $slug => $page_id) {
@@ -142,7 +143,7 @@ function get_current_language()
   $current_url = $_SERVER['REQUEST_URI'];
 
   $is_localhost = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false);
-  $prefix = $is_localhost ? '/web-sport.local/' : '/';
+  $prefix = $is_localhost ? '/capital-local/' : '/';
 
   $path = str_replace($prefix, '', $current_url);
 

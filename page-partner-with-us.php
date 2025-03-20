@@ -5,7 +5,7 @@
       <nav class="l-container">
         <ul>
           <li><a href="<?php echo get_home_url(); ?>/en/">Home</a></li>
-          <li><span>Partner</span></li>
+          <li><span>Partner with us</span></li>
         </ul>
       </nav>
     </div>
@@ -57,10 +57,11 @@
         </div>
         <div class="c-contact__item">
           <div class="c-contact__form01">
-            <form action="#" method="post">
+            
+          <form action="#" method="post">
               <div class="c-contact__group01">
                 <div class="c-contact__box02">
-                  <input type="text" name="name" placeholder="Họ và Tên">
+                  <input type="text" name="name" placeholder="Full Name">
                 </div>
                 <div class="c-contact__box02">
                   <input type="email" name="email" placeholder="Email">
@@ -68,17 +69,17 @@
               </div>
               <div class="c-contact__group01">
                 <div class="c-contact__box02">
-                  <input type="text" name="phone" placeholder="Số Điện Thoại">
+                  <input type="text" name="phone" placeholder="Phone Number">
                 </div>
                 <div class="c-contact__box02">
-                  <input type="text" name="title" placeholder="Chủ Đề">
+                  <input type="text" name="title" placeholder="Subject">
                 </div>
               </div>
               <div class="c-contact__box02">
-                <textarea name="message" placeholder="Nội Dung"></textarea>
+                <textarea name="message" placeholder="Note"></textarea>
               </div>
               <div class="c-contact__box03">
-                <button type="submit" class="c-btn__01">Gửi Tin</button>
+                <button type="submit" class="c-btn__01">Send</button>
               </div>
             </form>
           </div>
