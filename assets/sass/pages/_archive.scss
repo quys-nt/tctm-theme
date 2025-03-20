@@ -1,0 +1,125 @@
+@use '../global/' as g;
+
+.p-archive {
+  &__cats {
+    padding: 60px 0;
+    background-color: g.$blue03;
+
+    &--inner {
+      &01 {
+        display: grid;
+        gap: 40px;
+      }
+    }
+
+    &--box {
+      &01 {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+    }
+
+    &--title {
+      &02 {
+        color: g.$white01;
+        font-size: 24px;
+        font-weight: 700;
+        margin: 24px 0 32px;
+        color: g.$yellow01;
+      }
+    }
+
+    &--desc {
+      &01 {
+        color: g.$white01;
+        max-width: 420px;
+        margin-inline: auto;
+      }
+    }
+
+    &--intro {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    &--date,
+    &--cat {
+      position: relative;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: inline-flex;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &--cat {
+      &::before {
+        background: url('/assets/imgs/icon-tag-01.svg') no-repeat center center / contain;
+      }
+    }
+
+    &--date {
+      &::before {
+        background: url('/assets/imgs/icon-time-01.svg') no-repeat center center / contain;
+      }
+    }
+
+    &--icon {
+      &01 {
+        display: inline-flex;
+        width: 24px;
+        height: 1px;
+        background-color: g.$white01;
+      }
+    }
+
+    &--item {
+      color: g.$white01;
+      display: grid;
+      grid-template-columns: 560px 1fr;
+      align-items: center;
+      gap: 24px;
+
+      @include g.media(tab) {
+        grid-template-columns: 300px 1fr;
+      }
+
+      @include g.media(sp) {
+        grid-template-columns: 1fr;
+      }
+
+      &:hover {
+        .p-archive__cats--img img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    &--img {
+      display: inline-flex;
+      overflow: hidden;
+      border-radius: 8px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+  }
+
+  &__container {
+    max-width: 1020px;
+    padding-inline: 10px;
+    margin-inline: auto;
+  }
+}

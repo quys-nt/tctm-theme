@@ -181,7 +181,7 @@
   &__sub {
     &-menu {
       &-flag {
-        @include g.media(sp) {
+        @include g.media(tab) {
           text-align: center;
         }
         a.is-active {
@@ -190,7 +190,7 @@
             visibility: visible;
             opacity: 1;
 
-            @include g.media(sp) {
+            @include g.media(tab) {
               display: flex;
             }
           }
@@ -207,7 +207,7 @@
           opacity: 0;
           transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
 
-          @include g.media(sp) {
+          @include g.media(tab) {
             position: relative;
             top: auto;
             left: auto;
@@ -227,7 +227,7 @@
             font-size: 14px;
             cursor: pointer;
 
-            @include g.media(sp) {
+            @include g.media(tab) {
               justify-items: center;
             }
           }
