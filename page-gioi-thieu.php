@@ -4,7 +4,7 @@
     <div class="c-breadcrumb__inner">
       <nav class="l-container">
         <ul>
-          <li><a href="/">Trang Chủ</a></li>
+          <li><a href="<?php echo get_home_url(); ?>">Trang Chủ</a></li>
           <li><span>Giới Thiệu</span></li>
         </ul>
       </nav>

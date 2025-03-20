@@ -120,9 +120,9 @@ function catch_that_image()
 
 function custom_rewrite_rules()
 {
-  // Mảng chứa các slug và page_id tương ứng
   $pages = array(
     'about'       => 65,
+    'partner-with-us'       => 71,
   );
 
   foreach ($pages as $slug => $page_id) {

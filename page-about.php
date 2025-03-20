@@ -6,7 +6,7 @@
     <div class="c-breadcrumb__inner">
       <nav class="l-container">
         <ul>
-          <li><a href="/en/">Home</a></li>
+          <li><a href="<?php echo get_home_url(); ?>/en/">Home</a></li>
           <li><span>About</span></li>
         </ul>
       </nav>
