@@ -6,7 +6,7 @@
             <nav class="l-container">
                 <ul>
                     <li><a href="/">Trang Chủ</a></li>
-                    <li><span>Danh mục sản phẩm</span></li>
+                    <li><span><?php single_cat_title();?></span></li>
                 </ul>
             </nav>
         </div>
@@ -16,20 +16,15 @@
         <div class="l-container">
             <div class="p-product__archive--inner">
                 <div class="p-product__archive--left">
-                    <ul class="p-product__archive--cats">
-                        <li><a href="/">Bertazzoni</a></li>
-                        <li><a href="/">KAdeKA</a></li>
-                        <li><a href="/">KDK</a></li>
-                        <li><a href="/">EuroCave</a></li>
-                    </ul>
+                <?php get_product_categories(); ?>
                 </div>
                 <div class="p-product__archive--right">
                     <div class="p-product__archive--box01">
-                        <h1 class="p-product__archive--title01">Danh mục sản phẩm</h1>
-                        <div class="p-product__archive--box02">
+                        <h1 class="p-product__archive--title01">Danh mục : <?php single_cat_title();?></h1>
+                        <!-- <div class="p-product__archive--box02">
                             <p class="p-product__archive--text01">Showing 1-10 of 100 Products</p>
                             <p class="p-product__archive--text01">Sort by: <span class="c-text__yellow01">Most Popular</span><i class="p-product__archive--icon01"></i></p>
-                        </div>
+                        </div> -->
                     </div>
                     <?php if (have_posts()) : ?>
                         <div class="p-product__archive--inner02">

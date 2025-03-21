@@ -135,11 +135,12 @@ function custom_rewrite_rules()
 }
 add_action('init', 'custom_rewrite_rules');
 
-function sb_get_sub_cat() {
+function sb_get_sub_cat()
+{
   if (get_the_category()) {
     $categories = get_the_category();
     foreach ($categories as $key => $category) {
-      if($key == 1) {
+      if ($key == 1) {
         echo ', ';
       }
       echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
@@ -172,7 +173,7 @@ function create_product_post_type()
     'show_ui'            => true,                  // Hiển thị giao diện quản trị
     'show_in_menu'       => true,                  // Hiển thị trong menu admin
     'query_var'          => true,                  // Cho phép truy vấn
-    'rewrite'            => array('slug' => 'san-phan'), // Slug URL là "product"
+    'rewrite'            => array('slug' => 'san-pham'), // Slug URL là "product"
     'capability_type'    => 'post',                // Quyền giống như bài viết
     'has_archive'        => true,                  // Có trang lưu trữ
     'hierarchical'       => false,                 // Không phân cấp (giống bài viết, không giống trang)
@@ -212,13 +213,31 @@ function create_product_taxonomy()
 
   register_taxonomy('product_category', array('product'), $args); // Đăng ký taxonomy và gắn với "product"
 }
-add_action('init', 'create_product_taxonomy');  
+add_action('init', 'create_product_taxonomy');
 
-function reset_rewrite_rules() {
+function reset_rewrite_rules()
+{
   flush_rewrite_rules();
 }
 add_action('init', 'reset_rewrite_rules');
 
+function get_product_categories()
+{
+  $terms = get_terms(array(
+    'taxonomy' => 'product_category',
+    'hide_empty' => false,
+  ));
+
+  if (!empty($terms) && !is_wp_error($terms)) {
+    echo '<ul class="p-product__archive--cats">';
+    foreach ($terms as $term) {
+      echo '<li><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
+    }
+    echo '</ul>';
+  } else {
+    echo '<p>Không có danh mục nào.</p>';
+  }
+}
 function get_current_language()
 {
   $current_url = $_SERVER['REQUEST_URI'];

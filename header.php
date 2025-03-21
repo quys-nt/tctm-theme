@@ -116,11 +116,11 @@ $vi_url = $urls['vi'];
         ?>
           <ul>
             <li class="active-page"><a href="<?php echo get_home_url(); ?>/en/">Home</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/en/about">About</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/about/">About</a></li>
             <li><a href="#">Brand</a></li>
             <li><a href=#>Support and Service</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/en/partner-with-us">Partner</a></li>
-            <li><a href="#">E commerce</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/partner-with-us/">Partner</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/san-pham/">E commerce</a></li>
             <li class="c-header__sub-menu-flag">
               <a href="#" class="c-header__btn03 js-show-menu-flag"><span>EN</span>/VN</a>
               <ul>
@@ -138,18 +138,18 @@ $vi_url = $urls['vi'];
                 </li>
               </ul>
             </li>
-            <li><a href="<?php echo get_home_url(); ?>/en/contact" class="c-header__btn01">Contact</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/contact/" class="c-header__btn01">Contact</a></li>
           </ul>
         <?php
         } else {
         ?>
           <ul>
             <li class="active-page"><a href="<?php echo get_home_url(); ?>">Trang Chủ</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/gioi-thieu">Giới Thiệu</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/gioi-thieu/">Giới Thiệu</a></li>
             <li><a href="#">Thương Hiệu</a></li>
             <li><a href="#">Hỗ trợ và Dịch Vụ</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/tro-thanh-doi-tac">Trở Thành Đối Tác</a></li>
-            <li><a href="#">Mua Hàng Online</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/tro-thanh-doi-tac/">Trở Thành Đối Tác</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/san-pham/">Mua Hàng Online</a></li>
             <li class="c-header__sub-menu-flag">
               <a href="#" class="c-header__btn03 js-show-menu-flag">EN/<span>VN</span></a>
               <ul>
@@ -167,7 +167,7 @@ $vi_url = $urls['vi'];
                 </li>
               </ul>
             </li>
-            <li><a href="<?php echo get_home_url(); ?>/lien-he" class="c-header__btn01">Liên Hệ</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/lien-he/" class="c-header__btn01">Liên Hệ</a></li>
           </ul>
         <?php } ?>
       </nav>
