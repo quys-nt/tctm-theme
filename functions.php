@@ -135,18 +135,18 @@ function custom_rewrite_rules()
 }
 add_action('init', 'custom_rewrite_rules');
 
-function sb_get_sub_cat()
-{
+function sb_get_sub_cat() {
   if (get_the_category()) {
     $categories = get_the_category();
     foreach ($categories as $key => $category) {
-      if ($key == 1) {
+      if($key == 1) {
         echo ', ';
       }
-      echo '<span>' . $category->name . '</span>';
+      echo '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
     }
   }
 }
+
 function create_product_post_type()
 {
   $labels = array(
@@ -213,7 +213,7 @@ function create_product_taxonomy()
   register_taxonomy('product_category', array('product'), $args); // Đăng ký taxonomy và gắn với "product"
 }
 add_action('init', 'create_product_taxonomy');  
-                     // Gắn hàm vào hook "init"
+
 function reset_rewrite_rules() {
   flush_rewrite_rules();
 }
