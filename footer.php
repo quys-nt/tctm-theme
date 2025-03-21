@@ -83,17 +83,17 @@ $vi_url = $urls['vi'];
       <div class="c-footer__item c-footer__menu">
         <?php if ($lang == 'en') { ?>
           <ul>
-            <li><a href="/en/product">Products</a></li>
-            <li><a href="/en/news">Blog & News</a></li>
-            <li><a href="/en/contact">Contact</a></li>
-            <li><a href="/en/#">Partner with us</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/product">Products</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/news">Blog & News</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/contact">Contact</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/en/partner-with-us">Partner with us</a></li>
           </ul>
         <?php } else { ?>
         <ul>
-          <li><a href="/san-pham">Sản phẩm</a></li>
-          <li><a href="/tin-tuc">Blog & News</a></li>
-          <li><a href="/lien-he">Liên hệ</a></li>
-          <li><a href="#">Trởi thành đối tác</a></li>
+          <li><a href="<?php echo get_home_url(); ?>/san-pham">Sản phẩm</a></li>
+          <li><a href="<?php echo get_home_url(); ?>/tin-tuc">Blog & News</a></li>
+          <li><a href="<?php echo get_home_url(); ?>/lien-he">Liên hệ</a></li>
+          <li><a href="<?php echo get_home_url(); ?>/tro-thanh-doi-tac">Trở thành đối tác</a></li>
         </ul>
         <?php } ?>
       </div>
