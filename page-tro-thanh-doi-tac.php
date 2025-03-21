@@ -16,7 +16,7 @@
     <div class="l-container">
       <div class="c-about__inner">
         <div class="c-about__left">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-dealer-zone-01.png" alt="Trở thành đại lý của chúng tôi">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-dealer-zone-01.jpg" alt="Trở thành đại lý của chúng tôi">
         </div>
         <div class="c-about__right">
           <h1 class="c-title__01">Trở thành đại lý của chúng tôi</h1>

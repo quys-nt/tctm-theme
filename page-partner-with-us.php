@@ -15,7 +15,7 @@
     <div class="l-container">
       <div class="c-about__inner">
         <div class="c-about__left">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-dealer-zone-01.png" alt="Partner with us">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-dealer-zone-01.jpg" alt="Partner with us">
         </div>
         <div class="c-about__right">
           <h1 class="c-title__01">Partner with us</h1>

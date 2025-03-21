@@ -44,6 +44,17 @@
                     <?php else: ?>
                         <p class="c-text__white01" style="margin-top: 30px;">Không có sản phẩm nào trong danh mục này.</p>
                     <?php endif; ?>
+                    <div class="c-paging">
+                        <?php
+                        echo paginate_links(
+                            array(
+                                'mid_size'     => 1,
+                                'prev_text'    => sprintf(__('←')),
+                                'next_text'    => sprintf(__('→')),
+                            )
+                        );
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
