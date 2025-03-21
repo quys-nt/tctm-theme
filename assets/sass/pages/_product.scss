@@ -131,6 +131,7 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      border-radius: 8px;
     }
 
     &--img {
@@ -320,6 +321,8 @@
     }
 
     &--slider {
+      border: 1px solid g.$blue02;
+
       img {
         width: 100%;
         aspect-ratio: 1/1;
