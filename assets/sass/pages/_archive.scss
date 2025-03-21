@@ -26,6 +26,10 @@
         font-weight: 700;
         margin: 24px 0 32px;
         color: g.$yellow01;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -112,6 +116,7 @@
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s ease-in-out;
+        aspect-ratio: 16/9;
       }
     }
 

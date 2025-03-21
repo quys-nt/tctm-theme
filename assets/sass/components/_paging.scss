@@ -1,4 +1,42 @@
 @use '../global/' as g;
 
 .c-paging {
+  color: g.$white01;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 40px;
+
+  .page-numbers {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid g.$white01;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+
+    @include g.media(sp) {
+      width: 28px;
+      height: 28px;
+      font-size: 12px;
+    }
+
+    &.current {
+      background-color: g.$yellow01;
+      border-color: g.$yellow01;
+    }
+  }
+  
+  a {
+    &.page-numbers {
+      &:hover {
+        background-color: g.$yellow01;
+        border-color: g.$yellow01;
+      }
+    }
+  }
 }

@@ -53,6 +53,14 @@ $(document).ready(function () {
     ]
   });
 
+  $(".js-slider-single-prod").slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    dots: false,
+    arrows: true,
+  });
+
   $(".js-btn-show-menu").click(function (e) {
     e.preventDefault();
     $(this).toggleClass("is-active");
@@ -154,4 +162,12 @@ $(document).ready(function () {
     speed: 800,
     offset: 100,
   });
+
+  $(".js-btn-tab-prod").click(function () {
+    $(".js-btn-tab-prod").removeClass("is-active")
+    $(".js-tab-prod").removeClass("is-active")
+    $(this).addClass("is-active")
+    let tabProd = $(this).data("tab")
+    $("#" + tabProd).addClass("is-active")
+  })
 });
