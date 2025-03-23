@@ -8,6 +8,10 @@
   </div>
   <div class="p-product__archive--box03">
     <h3 class="p-product__archive--title02"><?php the_title(); ?></h3>
-    <a href="<?php the_permalink() ?>" class="p-product__archive--link">Xem Chi Tiết</a>
+    <?php
+    $external_link = get_field('link_product_external');
+    $link = $external_link ? $external_link : get_the_permalink();
+    ?>
+    <a href="<?php echo esc_url($link); ?>" class="p-product__archive--link">Xem Chi Tiết</a>
   </div>
 </div>
