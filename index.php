@@ -144,30 +144,7 @@
         </div>
         <div class="c-contact__item">
           <div class="c-contact__form01">
-            <form action="#" method="post">
-              <div class="c-contact__group01">
-                <div class="c-contact__box02">
-                  <input type="text" name="name" placeholder="Họ và Tên">
-                </div>
-                <div class="c-contact__box02">
-                  <input type="email" name="email" placeholder="Email">
-                </div>
-              </div>
-              <div class="c-contact__group01">
-                <div class="c-contact__box02">
-                  <input type="text" name="phone" placeholder="Số Điện Thoại">
-                </div>
-                <div class="c-contact__box02">
-                  <input type="text" name="title" placeholder="Chủ Đề">
-                </div>
-              </div>
-              <div class="c-contact__box02">
-                <textarea name="message" placeholder="Nội Dung"></textarea>
-              </div>
-              <div class="c-contact__box03">
-                <button type="submit" class="c-btn__01">Gửi Tin</button>
-              </div>
-            </form>
+            <?php echo do_shortcode('[contact-form-7 id="dd9e62d" title="Form liên hệ 1"]'); ?>
           </div>
         </div>
       </div>

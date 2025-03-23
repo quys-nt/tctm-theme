@@ -148,30 +148,7 @@
         </div>
         <div class="c-contact__item">
           <div class="c-contact__form01">
-            <form action="#" method="post">
-              <div class="c-contact__group01">
-                <div class="c-contact__box02">
-                  <input type="text" name="name" placeholder="Full Name">
-                </div>
-                <div class="c-contact__box02">
-                  <input type="email" name="email" placeholder="Email">
-                </div>
-              </div>
-              <div class="c-contact__group01">
-                <div class="c-contact__box02">
-                  <input type="text" name="phone" placeholder="Phone Number">
-                </div>
-                <div class="c-contact__box02">
-                  <input type="text" name="title" placeholder="Subject">
-                </div>
-              </div>
-              <div class="c-contact__box02">
-                <textarea name="message" placeholder="Note"></textarea>
-              </div>
-              <div class="c-contact__box03">
-                <button type="submit" class="c-btn__01">Send</button>
-              </div>
-            </form>
+            <?php echo do_shortcode('[contact-form-7 id="ab46e61" title="Form liên hệ tiếng Anh"]'); ?>
           </div>
         </div>
       </div>
