@@ -6,7 +6,7 @@
 
   @include g.media(tab) {
     padding: 80px 0;
-  } 
+  }
 
   &__inner {
     display: grid;
@@ -107,8 +107,28 @@
 
   &__maps {
     margin-bottom: -20px;
+
     iframe {
       width: 100%;
     }
+  }
+
+  .wpcf7 form .wpcf7-response-output {
+    margin-inline: 0;
+  }
+
+  .wpcf7 form.failed .wpcf7-response-output,
+  .wpcf7 form.aborted .wpcf7-response-output {
+    color: #dc3232;
+  }
+
+  .wpcf7 form.invalid .wpcf7-response-output,
+  .wpcf7 form.unaccepted .wpcf7-response-output,
+  .wpcf7 form.payment-required .wpcf7-response-output {
+    color: #ffb900;
+  }
+
+  .wpcf7 form.sent .wpcf7-response-output {
+    color: #46b450;
   }
 }
