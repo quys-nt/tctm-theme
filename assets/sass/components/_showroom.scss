@@ -1,0 +1,43 @@
+@use '../global/' as g;
+
+.c-showroom {
+  background-color: g.$white02;
+  padding-block: 120px;
+
+  @include g.media(tab) {
+    padding: 80px 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: calc(100% / 2);
+    padding: 10px 20px;
+
+    @include g.media(sp) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__text01 {
+    a {
+      font-size: 18px;
+      font-weight: 600;
+      color: #dc3232;
+    }
+  }
+}

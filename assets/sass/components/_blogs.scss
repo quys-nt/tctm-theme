@@ -38,6 +38,7 @@
     }
 
     img {
+      aspect-ratio: 16/9;
       transition: transform 0.3s ease-in-out;
     }
   }
@@ -50,6 +51,7 @@
     color: g.$yellow01;
     text-underline-offset: 8px;
     transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
 
     &:hover {
       text-decoration: underline;

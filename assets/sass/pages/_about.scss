@@ -2,14 +2,14 @@
 
 .p-about {
   &__misson {
-    background-color: g.$blue01;
-    color: g.$white01;
+    background-color: g.$white02;
     padding-block: 90px;
 
     &--list {
       display: grid;
       grid-template-columns: repeat(3, 271px);
-      justify-content: space-between;
+      justify-content: center;
+      gap: 20px 40px;
       margin-top: 60px;
 
       @include g.media(tab) {
@@ -26,21 +26,6 @@
 
     &--item {
       position: relative;
-      text-align: center;
-
-      @media screen and (min-width:1220px) {
-        &:not(:last-child) {
-          &::before {
-            position: absolute;
-            top: 10px;
-            left: calc(100% - 30px);
-            content: '';
-            width: 252px;
-            height: 59px;
-            background: url("/assets/imgs/icon-line-01.svg") no-repeat top left / contain;
-          }
-        }
-      }
     }
 
     &--sub {
@@ -48,18 +33,22 @@
         font-weight: 700;
         font-size: 20px;
         line-height: 1.6;
-        margin: 18px 0;
+        margin: 12px 0;
       }
     }
 
     &--icon {
       display: inline-flex;
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       margin-inline: auto;
-      padding: 8px;
-      border-radius: 4px;
+      padding: 15px;
+      border-radius: 50%;
       background-color: g.$blue02;
+    }
+
+    &--desc {
+      font-size: 16px;
     }
   }
 
@@ -122,7 +111,8 @@
           margin-top: 20px;
         }
 
-        li,button {
+        li,
+        button {
           width: 15px;
           height: 15px;
 
@@ -187,6 +177,22 @@
         font-size: 12px;
         line-height: 1.6;
         color: g.$yellow01;
+      }
+    }
+  }
+
+  &__support {
+    padding: 80px 0;
+    background-color: g.$white02;
+
+    &--inner {
+      max-width: 768px;
+      margin-inline: auto;
+    }
+
+    &--text {
+      &01 {
+        text-align: center;
       }
     }
   }

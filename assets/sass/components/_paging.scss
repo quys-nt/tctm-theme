@@ -16,6 +16,7 @@
     width: 40px;
     height: 40px;
     border: 1px solid g.$white01;
+    background-color: g.$blue01;
     border-radius: 4px;
     transition: all 0.3s ease-in-out;
 
@@ -30,7 +31,7 @@
       border-color: g.$yellow01;
     }
   }
-  
+
   a {
     &.page-numbers {
       &:hover {
