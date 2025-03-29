@@ -12,7 +12,7 @@
     <a href="<?php the_permalink() ?>">
       <h3 class="c-title__02 c-blogs__title"><?php the_title(); ?></h3>
     </a>
-    <div class="c-blogs__desc"><?php the_excerpt(); ?></div>
+    <!-- <div class="c-blogs__desc"><?php the_excerpt(); ?></div> -->
     <a href="<?php the_permalink() ?>" class="c-blogs__link">Xem Thêm</a>
   </div>
 </div>

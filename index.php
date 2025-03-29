@@ -5,7 +5,7 @@
   <div class="c-mv">
     <div class="c-mv__slider js-slider-mv">
       <div>
-        <a href="https://capitalmktgcomvn702.mbws.vn/" target="_blank">
+        <a href="https://vn.bertazzoni.com/" target="_blank">
           <picture>
             <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-01.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-01-sp.png" alt="img mv 01">
@@ -13,7 +13,7 @@
         </a>
       </div>
       <div>
-        <a href="https://vn.bertazzoni.com/" target="_blank">
+        <a href="https://capitalmktgcomvn990.mbws.vn/" target="_blank">
           <picture>
             <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-02.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-02-sp.png" alt="img mv 02">
@@ -21,7 +21,7 @@
         </a>
       </div>
       <div>
-        <a href="https://capitalmktgcomvn990.mbws.vn/" target="_blank">
+        <a href="https://capitalmktgcomvn702.mbws.vn/" target="_blank">
           <picture>
             <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-03.png">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-mv-03-sp.png" alt="img mv 03">
@@ -30,6 +30,8 @@
       </div>
     </div>
   </div>
+
+  <?php get_template_part('template-parts/section-partner'); ?>
 
   <section class="c-about">
     <div class="l-container">
@@ -55,98 +57,118 @@
     </div>
   </section>
 
-  <section class="c-partner">
+  <section class="c-blogs">
     <div class="l-container">
       <div class="c-text--align-center01">
-        <h2 class="c-title__01">Các Thương Hiệu Đang Phân Phối</h2>
-        <p class="c-desc__01">CÔNG TY TNHH THƯƠNG MẠI & TIẾP THỊ THÀNH CÔNG là Nhà phân phối uỷ quyền chính hãng của
-          các Thương hiệu thiết bị cao cấp như KDK - Thương hiệu quạt cao cấp từ Nhật Bản, KAdeKA - Một trong nhưng
-          đơn vị tiên phong trong ngành công nghiệp tủ ướp và bảo quản vang tại Singapore, Bertazzoni - Thương hiệu
-          thiết bị bếp hơn 140 năm từ Ý, EuroCave - Thương hiệu tủ rượu cao cấp từ Pháp.</p>
+        <h2 class="c-title__01">Tin tức</h2>
       </div>
-      <div class="c-partner__inner">
-        <div class="c-partner__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-kdk.png" alt="logo kdk">
-          <h3 class="c-partner__desc">Thương hiệu quạt điện cao cấp hơn 115 năm từ Nhật Bản</h3>
-        </div>
-        <div class="c-partner__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-kadeka.png" alt="logo kadeka">
-          <h3 class="c-partner__desc">Một trong nhưng đơn vị tiên phong trong ngành công nghiệp tủ ướp và bảo quản
-            vang tại Singapore</h3>
-        </div>
-        <div class="c-partner__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-bertazzoni.png" alt="logo bertazzoni">
-          <h3 class="c-partner__desc">Thương hiệu thiết bị bếp cao cấp hơn 140 năm từ Ý</h3>
-        </div>
-        <div class="c-partner__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-eurocave.png" alt="logo eurocave">
-          <h3 class="c-partner__desc">Thương hiệu tủ rượu cao cấp từ Pháp</h3>
+      <div class="c-blogs__inner">
+        <?php
+        $args = array(
+          'post_type' => 'post',
+          'category_name' => 'tin-tuc',
+          'posts_per_page' => 3,
+        );
+        $blogs = new WP_Query($args);
+        if ($blogs->have_posts()) :
+          while ($blogs->have_posts()) : $blogs->the_post();
+            get_template_part('template-parts/post', get_post_format());
+          endwhile;
+        endif;
+        wp_reset_postdata(); ?>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-showroom">
+    <div class="l-container">
+      <div class="c-text--align-center01">
+        <h2 class="c-title__01">Showroom của TCTM</h2>
+      </div>
+      <div class="c-showroom__inner">
+        <div class="c-showroom__item">
+          <div class="c-showroom__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-showroom-01.png" alt="Showroom SALA (TP HCM)">
+          </div>
+          <h3 class="c-showroom__title">Showroom SALA (TP HCM)</h3>
+          <p class="c-showroom__text01"><strong>Tel:</strong> <a href="tel:19001145">19001145</a></p>
+          <p class="c-showroom__text01"><strong>Email:</strong> <a href="mailto:info@tctm.com.vn">info@tctm.com.vn</a>
+          </p>
+          <p class="c-showroom__text01">
+            <strong>Địa chỉ:</strong> Số 00.08 Tháp B2, Khu chung cư phức hợp Lô M2 (Sarimi), số 72
+            Nguyễn Cơ Thạch, P. An Lợi Đông, TP. Thủ Đức, TP. HCM
+          </p>
+          <div class="c-showroom__text01">
+            <strong>Thời gian làm việc:</strong>
+            <p>
+              8:30 – 17.30: Thứ hai - Thứ bảy.<br>
+              Chủ nhật và các ngày lễ nghỉ
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <?php
-  $showpost = false;
-  if ($showpost) {
-  ?>
-    <section class="c-blogs">
-      <div class="l-container">
-        <div class="c-text--align-center01">
-          <h2 class="c-title__01">Tin tức</h2>
-        </div>
-        <div class="c-blogs__inner">
-          <?php
-          $args = array(
-            'post_type' => 'post',
-            'category_name' => 'tin-tuc',
-            'posts_per_page' => 3,
-          );
-          $blogs = new WP_Query($args);
-          if ($blogs->have_posts()) :
-            while ($blogs->have_posts()) : $blogs->the_post();
-              get_template_part('template-parts/post', get_post_format());
-            endwhile;
-          endif;
-          wp_reset_postdata(); ?>
-        </div>
-      </div>
-    </section>
-  <?php
-  }
-  ?>
-
-  <section class="c-contact" id="contact">
+  <section class="c-contact02" id="contact">
     <div class="l-container">
       <div class="c-text--align-center01">
-        <h2 class="c-title__01">Liên Hệ Với Chúng Tôi</h2>
-        <p class="c-desc__01 c-text__white01">
-          Bạn có muốn hợp tác với chúng tôi không?<br>
-          Chỉ cần gửi câu hỏi cho chúng tôi và chúng tôi sẽ trả lời bạn!
-        </p>
+        <h2 class="c-title__01">Liên hệ</h2>
       </div>
-      <div class="c-contact__inner">
-        <div class="c-contact__item">
-          <h3 class="c-title__02 c-contact__title02">Bạn muốn liên hệ trực tiếp?</h3>
-          <p class="c-text__white01">
-            Liên hiện với chúng tôi qua:
+      <div class="c-contact__inner02">
+        <div class="c-contact__item01">
+          <div class="c-contact__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-comment01.png" alt="icon commnet">
+          </div>
+          <h3 class="c-title__03">Yêu cầu hỗ trợ</h3>
+          <p class="c-desc__01">
+            Bạn muốn tư vấn để hiểu rõ hơn về sản phẩm.<br> Liên hệ với các chuyên gia của chúng tôi để được hỗ trợ
+            cụ thể về sản phẩm và hỗ trợ kỹ thuật.
           </p>
-          <div class="c-contact__box01">
-            <div class="c-contact__item02">
-              <p class="c-contact__title03">Email:</p>
-              <p><a href="mailto:info@tctm.com.vn" class="c-contact__link01">info@tctm.com.vn</a></p>
-            </div>
-            <div class="c-contact__item02">
-              <p class="c-contact__title03">Số Điện Thoại:</p>
-              <p><a href="tel:19001145" class="c-contact__link01">Hotline: 19001145</a></p>
+          <div class="c-contact__modal">
+            <button popovertarget="modal-contact" class="c-btn__01 c-contact__modal--btn01">Yêu cầu</button>
+            <div id="modal-contact" popover class="c-contact__modal--body">
+              <h2 class="c-contact__modal--title01">Nhập thông tin yêu cầu</h2>
+              <?php echo do_shortcode('[contact-form-7 id="1d9a7d9" title="Form liên hệ VN 02"]'); ?>
+              <h3 class="c-contact__modal--title02">Hoặc gọi cho chúng tôi</h3>
+              <a href="tel:19001145" class="c-contact__modal--link01">19001145</a>
+              <button popovertarget="modal-contact" class="c-contact__modal--btn02">Close</button>
             </div>
           </div>
         </div>
-        <div class="c-contact__item">
-          <div class="c-contact__form01">
-            <?php echo do_shortcode('[contact-form-7 id="dd9e62d" title="Form liên hệ 1"]'); ?>
+        <div class="c-contact__item01">
+          <div class="c-contact__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-phone01.png" alt="icon phone">
           </div>
+          <h3 class="c-title__03">Liên hệ chúng tôi</h3>
+          <p class="c-desc__01">Hotline 24/7: <a href="tel:1900 1145" class="c-contact__link02">1900 1145</a></p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-showroom">
+    <div class="l-container">
+      <div class="c-text--align-center01">
+        <h2 class="c-title__01">E-Catalogue</h2>
+      </div>
+      <div class="p-product__archive--inner03">
+        <?php
+        $args = array(
+          'post_type' => 'product',
+          'posts_per_page' => 4,
+          'post_status' => 'publish',
+        );
+        $product_query = new WP_Query($args);
+        if ($product_query->have_posts()) :
+          while ($product_query->have_posts()) : $product_query->the_post();
+            get_template_part('template-parts/product-02', get_post_format());
+          endwhile;
+          wp_reset_postdata();
+        else :
+          echo '<p>Không có sản phẩm nào được tìm thấy.</p>';
+        endif;
+        ?>
       </div>
     </div>
   </section>

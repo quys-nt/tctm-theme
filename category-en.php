@@ -70,12 +70,12 @@
       </div>
       <div class="c-partner__inner">
         <div class="c-partner__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-kdk.png" alt="logo kdk">
-          <h3 class="c-partner__desc-en">A high-end electric fan brand with over 115 years of history from Japan.</h3>
-        </div>
-        <div class="c-partner__item">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-kadeka.png" alt="logo kadeka">
           <h3 class="c-partner__desc-en">A pioneer in the wine chilling and preservation industry in Singapore.</h3>
+        </div>
+        <div class="c-partner__item">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-kdk.png" alt="logo kdk">
+          <h3 class="c-partner__desc-en">A high-end electric fan brand with over 115 years of history from Japan.</h3>
         </div>
         <div class="c-partner__item">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-bertazzoni.png" alt="logo bertazzoni">
