@@ -36,7 +36,7 @@
         </div>
         <div class="c-contact__item">
           <div class="c-contact__form01">
-            <?php echo do_shortcode('[contact-form-7 id="dd9e62d" title="Form liên hệ 1"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="b77c7b5" title="Form liên hệ VN"]'); ?>
           </div>
         </div>
       </div>

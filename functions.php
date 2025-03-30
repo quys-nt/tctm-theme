@@ -10,6 +10,16 @@ function theme_shop_sport_setup()
 }
 add_action('after_setup_theme', 'theme_shop_sport_setup');
 
+if (function_exists('acf_add_options_page')) {
+  acf_add_options_page(array(
+    'page_title'    => 'Setting Themes',
+    'menu_title'    => 'Setting Themes',
+    'menu_slug'     => 'theme-settings',
+    'capability'    => 'edit_posts',
+    'redirect'  => false
+  ));
+}
+
 function theme_shop_sport_enqueue_styles()
 {
   wp_enqueue_style('theme-shop-sport-style', get_stylesheet_uri());
@@ -118,9 +128,9 @@ function catch_that_image()
 function custom_rewrite_rules()
 {
   $pages = array(
-    'about'       => 75,
-    'contact'       => 81,
-    'partner-with-us'       => 77,
+    'about'                 => 29,
+    'contact'               => 31,
+    'partner-with-us'       => 27,
   );
 
   foreach ($pages as $slug => $page_id) {

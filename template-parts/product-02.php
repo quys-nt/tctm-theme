@@ -12,7 +12,7 @@ $link = $external_link ? $external_link : get_the_permalink();
     <a href="<?php echo esc_url($link); ?>" class="p-product__archive--link02">Xem Chi Tiết</a>
   </div>
   <div class="p-product__archive--box03">
-    <p class="p-product__archive--text02">HMH | <span><?php the_date(); ?></span></p>
+    <p class="p-product__archive--text02">HMH | <span><?php the_time('d/m/Y'); ?></span></p>
     <h3 class="p-product__archive--title02"><?php the_title(); ?></h3>
     <a href="<?php echo esc_url($link); ?>" class="p-product__archive--link03" download>Download</a>
   </div>

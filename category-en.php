@@ -148,7 +148,7 @@
         </div>
         <div class="c-contact__item">
           <div class="c-contact__form01">
-            <?php echo do_shortcode('[contact-form-7 id="ab46e61" title="Form liên hệ tiếng Anh"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="3102f76" title="Form liên hệ EN"]'); ?>
           </div>
         </div>
       </div>
