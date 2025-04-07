@@ -2,12 +2,18 @@
 
 .p-about {
   &__misson {
-    background-color: g.$white02;
+    background-color: g.$blue01;
+    color: g.$white01;
     padding-block: 90px;
+
+    &02 {
+      background-color: g.$white02;
+      color: g.$blue01;
+    }
 
     &--list {
       display: grid;
-      grid-template-columns: repeat(3, 271px);
+      grid-template-columns: repeat(4, 1fr);
       justify-content: center;
       gap: 20px 40px;
       margin-top: 60px;
@@ -26,6 +32,7 @@
 
     &--item {
       position: relative;
+      text-align: center;
     }
 
     &--sub {
@@ -48,7 +55,7 @@
     }
 
     &--desc {
-      font-size: 16px;
+      font-size: 15px;
     }
   }
 
@@ -185,14 +192,33 @@
     padding: 80px 0;
     background-color: g.$white02;
 
-    &--inner {
-      max-width: 768px;
-      margin-inline: auto;
-    }
-
     &--text {
       &01 {
         text-align: center;
+      }
+    }
+
+    &--list {
+      @extend .p-about__misson--list;
+      margin-bottom: 40px;
+    }
+
+    &--item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      @include g.media(sp) {
+        text-align: center
+      }
+    }
+
+    &--icon {
+      @extend .p-about__misson--icon;
+      margin: 0;
+
+      @include g.media(sp) {
+        margin: auto;
       }
     }
   }
