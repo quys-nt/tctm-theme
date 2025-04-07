@@ -11,12 +11,16 @@
           $imageSP = get_sub_field('slider_img_sp');
           $sliderlink = get_sub_field('link_img');
           ?>
-          <a href="<?php echo $sliderlink ? esc_url($sliderlink) : "#"; ?>" target="_blank">
+          <?php if ($sliderlink) :?>
+            <a href="<?php echo $sliderlink ? esc_url($sliderlink) : "#"; ?>" target="_blank">
+          <?php endif ;?>
             <picture>
               <source media="(min-width: 768px)" srcset="<?php echo esc_url($imagePC['url']); ?>">
               <img src="<?php echo $imageSP ? esc_url($imageSP['url']) : esc_url($imagePC['url']); ?>" alt="<?php echo esc_url($imagePC['alt']); ?>">
             </picture>
-          </a>
+          <?php if ($sliderlink) :?>
+            </a>
+          <?php endif ;?>
         <?php endwhile; ?>
       <?php endif; ?>
     </div>

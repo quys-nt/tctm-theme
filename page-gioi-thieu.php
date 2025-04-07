@@ -24,12 +24,12 @@
           dùng Việt Nam các thiết bị gia dụng hàng đầu nhằm nâng cao mức sống. TCTM là đơn vị phân phối chính thức
           độc quyền tại Việt Nam các sản phẩm mang thương hiệu KDK (Nhật Bản); KadeKa (Nhật Bản) và Bertazzoni
           (Italia).
-          <br>
+          <!-- <br>
           <br>
           <strong>TẦM NHÌN</strong>: TCTM hướng đến trở thành đối tác chiến lược hàng đầu, mang đến những sản phẩm
-          chất lượng cao và giải pháp tối ưu cho người tiêu dùng Việt Nam.
+          chất lượng cao và giải pháp tối ưu cho người tiêu dùng Việt Nam. -->
         </div>
-        <p class="c-about__desc">Giá trị cốt lõi trình & Sứ mệnh bày như ví dụ</p>
+        <!-- <p class="c-about__desc">Giá trị cốt lõi trình & Sứ mệnh bày như ví dụ</p>
         <ul class="c-about__desc c-about__desc-02">
           <li><strong>Tập trung vào Khách hàng</strong>: Cung cấp dịch vụ và hỗ trợ xuất sắc để đáp ứng nhu cầu đa
             dạng của người tiêu dùng Việt Nam.</li>
@@ -39,9 +39,9 @@
             nghiệm của khách hàng làm trọng tâm.</li>
           <li><strong>Đối tác</strong>: Xây dựng mối quan hệ bền chặt và lâu dài với các nhà cung cấp và nhà phân
             phối dựa trên sự tin tưởng và tôn trọng lẫn nhau.</li>
-        </ul>
+        </ul> -->
         <div class="c-btn__group01">
-          <a href="/lien-he/" class="c-btn__01">Liên Hệ</a>
+          <a href="<?php echo get_home_url(); ?>/lien-he/" class="c-btn__01">Liên Hệ</a>
         </div>
       </div>
     </div>
@@ -72,25 +72,31 @@
     <div class="p-about__misson--list">
       <div class="p-about__misson--item">
         <div class="p-about__misson--icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-01.png" alt="Hệ Thống">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-01.png" alt="Tập trung vào Khách hàng">
         </div>
-        <h3 class="p-about__misson--sub-title">Hệ Thống</h3>
-        <p class="p-about__misson--desc">Xây dựng hệ thống phân phối chuyên nghiệp, hiệu quả và bền vững.</p>
+        <h3 class="p-about__misson--sub-title">Tập trung<br>vào Khách hàng</h3>
+        <p class="p-about__misson--desc">Cung cấp dịch vụ và hỗ trợ xuất sắc để đáp ứng nhu cầu đa dạng của người tiêu dùng Việt Nam.</p>
       </div>
       <div class="p-about__misson--item">
         <div class="p-about__misson--icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-02.png" alt="Dịch Vụ">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-02.png" alt="Chất lượng">
         </div>
-        <h3 class="p-about__misson--sub-title">Dịch Vụ</h3>
-        <p class="p-about__misson--desc">Đảm bảo dịch vụ hậu mãi tận tâm, nâng cao trải nghiệm khách hàng.</p>
+        <h3 class="p-about__misson--sub-title">Chất lượng</h3>
+        <p class="p-about__misson--desc">Cung cấp các sản phẩm tuân thủ các tiêu chuẩn cao nhất về hiệu suất và độ tin cậy.</p>
       </div>
       <div class="p-about__misson--item">
         <div class="p-about__misson--icon">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-03.png" alt="Hợp Tác">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-04.png" alt="Chính trực">
         </div>
-        <h3 class="p-about__misson--sub-title">Hợp Tác</h3>
-        <p class="p-about__misson--desc">Hợp tác chặt chẽ với các đối tác để phát triển thị trường và mở rộng thương
-          hiệu.</p>
+        <h3 class="p-about__misson--sub-title">Chính trực</h3>
+        <p class="p-about__misson--desc">Kinh doanh với sự trung thực và minh bạch và đặt sự hài lòng về trải nghiệm của khách hàng làm trọng tâm.</p>
+      </div>
+      <div class="p-about__misson--item">
+        <div class="p-about__misson--icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-03.png" alt="Đối tác">
+        </div>
+        <h3 class="p-about__misson--sub-title">Đối tác</h3>
+        <p class="p-about__misson--desc">Xây dựng mối quan hệ bền chặt và lâu dài với các nhà cung cấp và nhà phân phối dựa trên sự tin tưởng và tôn trọng lẫn nhau.</p>
       </div>
     </div>
   </div>
@@ -101,29 +107,43 @@
 <section class="p-about__support">
   <div class="l-container">
     <div class="c-text--align-center01">
-      <h2 class="c-title__01">DỊCH VỤ HỖ TRỢ KHÁCH HÀNG</h2>
+      <h2 class="c-title__01">Dịch Vụ Hỗ Trợ Khách Hàng</h2>
       <div class="c-desc__01">
         TCTM cam kết mang đến trải nghiệm dịch vụ chuyên nghiệp và tận tâm:
       </div>
     </div>
-    <div class="p-about__support--inner">
-      <ul>
-        <li>
-          <strong>Tư vấn chuyên sâu:</strong> Hỗ trợ khách hàng lựa chọn sản phẩm phù hợp với nhu cầu.
-        </li>
-        <li>
-          <strong>Bảo hành chính hãng:</strong> Đảm bảo quyền lợi với chính sách bảo hành minh bạch, rõ ràng.
-        </li>
-        <li>
-          <strong>Dịch vụ hậu mãi:</strong> Hỗ trợ lắp đặt, bảo trì và sửa chữa nhanh chóng.
-        </li>
-        <li>
-          <strong>Chăm sóc khách hàng:</strong> Đội ngũ sẵn sàng hỗ trợ qua hotline, email và trực tiếp tại
-          showroom.
-        </li>
-      </ul>
-      <p class="p-about__support--text01">Chúng tôi luôn đồng hành để mang đến sự hài lòng và yên tâm cho khách hàng!</p>
+    <div class="p-about__support--list">
+      <div class="p-about__support--item">
+        <div class="p-about__support--icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-support-01.png" alt="Tư vấn chuyên sâu">
+        </div>
+        <h3 class="p-about__support--title">Tư vấn chuyên sâu</h3>
+        <p>Hỗ trợ khách hàng lựa chọn sản phẩm phù hợp với nhu cầu.</p>
+      </div>
+      <div class="p-about__support--item">
+        <div class="p-about__support--icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-support-02.png" alt="Bảo hành chính hãng">
+        </div>
+        <h3 class="p-about__support--title">Bảo hành chính hãng</h3>
+        <p>Đảm bảo quyền lợi với chính sách bảo hành minh bạch, rõ ràng.</p>
+      </div>
+      <div class="p-about__support--item">
+        <div class="p-about__support--icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-support-03.png" alt="Dịch vụ hậu mãi">
+        </div>
+        <h3 class="p-about__support--title">Dịch vụ hậu mãi</h3>
+        <p>Hỗ trợ lắp đặt, bảo trì và sửa chữa nhanh chóng.</p>
+      </div>
+      <div class="p-about__support--item">
+        <div class="p-about__support--icon">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-about-support-04.png" alt="Chăm sóc khách hàng">
+        </div>
+        <h3 class="p-about__support--title">Chăm sóc khách hàng</h3>
+        <p>Đội ngũ sẵn sàng hỗ trợ qua hotline, email và trực tiếp tại showroom.</p>
+
+      </div>
     </div>
+    <p class="p-about__support--text01">Chúng tôi luôn đồng hành để mang đến sự hài lòng và yên tâm cho khách hàng!</p>
   </div>
 </section>
 
