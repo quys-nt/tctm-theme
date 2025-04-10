@@ -88,6 +88,19 @@
       }
     }
   }
+
+  &__brand {
+    &--item {
+      display: flex;
+      a{
+        display: flex;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @keyframes sliderPagination {
