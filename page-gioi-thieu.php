@@ -1,15 +1,11 @@
 <?php get_header(); ?>
 <main>
-  <div class="c-breadcrumb">
-    <div class="c-breadcrumb__inner">
-      <nav class="l-container">
-        <ul>
-          <li><a href="<?php echo get_home_url(); ?>">Trang Chủ</a></li>
-          <li><span>Giới thiệu Công ty</span></li>
-        </ul>
-      </nav>
-    </div>
+  
+<div class="c-mv__brand">
+  <div class="c-mv__brand--item">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/banner-home-page.jpg" alt="banner home page">
   </div>
+</div>
 
 <section class="c-about">
   <div class="l-container">
@@ -24,22 +20,7 @@
           dùng Việt Nam các thiết bị gia dụng hàng đầu nhằm nâng cao mức sống. TCTM là đơn vị phân phối chính thức
           độc quyền tại Việt Nam các sản phẩm mang thương hiệu KDK (Nhật Bản); KadeKa (Nhật Bản) và Bertazzoni
           (Italia).
-          <!-- <br>
-          <br>
-          <strong>TẦM NHÌN</strong>: TCTM hướng đến trở thành đối tác chiến lược hàng đầu, mang đến những sản phẩm
-          chất lượng cao và giải pháp tối ưu cho người tiêu dùng Việt Nam. -->
         </div>
-        <!-- <p class="c-about__desc">Giá trị cốt lõi trình & Sứ mệnh bày như ví dụ</p>
-        <ul class="c-about__desc c-about__desc-02">
-          <li><strong>Tập trung vào Khách hàng</strong>: Cung cấp dịch vụ và hỗ trợ xuất sắc để đáp ứng nhu cầu đa
-            dạng của người tiêu dùng Việt Nam.</li>
-          <li><strong>Chất lượng</strong>: Cung cấp các sản phẩm tuân thủ các tiêu chuẩn cao nhất về hiệu suất và độ
-            tin cậy.</li>
-          <li><strong>Chính trực</strong>: Kinh doanh với sự trung thực và minh bạch và đặt sự hài lòng về trải
-            nghiệm của khách hàng làm trọng tâm.</li>
-          <li><strong>Đối tác</strong>: Xây dựng mối quan hệ bền chặt và lâu dài với các nhà cung cấp và nhà phân
-            phối dựa trên sự tin tưởng và tôn trọng lẫn nhau.</li>
-        </ul> -->
         <div class="c-btn__group01">
           <a href="<?php echo get_home_url(); ?>/lien-he/" class="c-btn__01">Liên Hệ</a>
         </div>

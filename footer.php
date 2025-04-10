@@ -72,12 +72,12 @@ $vi_url = $urls['vi'];
             <li><a href="/en/#">Product installation instructions</a></li>
           </ul>
         <?php } else { ?>
-        <ul>
-          <li><a href="#">Chính sách bảo hành</a></li>
-          <li><a href="#">Tài liệu hướng dẫn sử dụng</a></li>
-          <li><a href="#">Danh sách trung tâm bảo hành</a></li>
-          <li><a href="#">Hướng dẫn lắp đặt sản phẩm</a></li>
-        </ul>
+          <ul>
+            <li><a href="#">Chính sách bảo hành</a></li>
+            <li><a href="#">Tài liệu hướng dẫn sử dụng</a></li>
+            <li><a href="#">Danh sách trung tâm bảo hành</a></li>
+            <li><a href="#">Hướng dẫn lắp đặt sản phẩm</a></li>
+          </ul>
         <?php } ?>
       </div>
       <div class="c-footer__item c-footer__menu">
@@ -88,11 +88,11 @@ $vi_url = $urls['vi'];
             <li><a href="<?php echo get_home_url(); ?>/en/partner-with-us">Partner with us</a></li>
           </ul>
         <?php } else { ?>
-        <ul>
-          <li><a href="<?php echo get_home_url(); ?>/san-pham">Sản phẩm</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/lien-he">Liên hệ</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/tro-thanh-doi-tac">Trở thành đối tác</a></li>
-        </ul>
+          <ul>
+            <li><a href="<?php echo get_home_url(); ?>/san-pham">Sản phẩm</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/lien-he">Liên hệ</a></li>
+            <li><a href="<?php echo get_home_url(); ?>/tro-thanh-doi-tac">Trở thành đối tác</a></li>
+          </ul>
         <?php } ?>
       </div>
       <div class="c-footer__item">
@@ -104,6 +104,19 @@ $vi_url = $urls['vi'];
     </div>
   </div>
 </footer>
+
+<ul class="c-footer__social">
+  <li>
+    <a href="tel:19001145">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-phone-03.png" alt="icon phone">
+    </a>
+  </li>
+  <li>
+    <a href="https://zalo.me/2380433647108267875" target="_blank">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-zalo.png" alt="icon zalo">
+    </a>
+  </li>
+</ul>
 
 <!-- JS -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
