@@ -11,7 +11,7 @@
   <div class="l-container">
     <div class="c-about__inner">
       <div class="c-about__left">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-about-01.png" alt="Giới thiệu Công ty">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-showroom-03.jpg" alt="Giới thiệu Công ty">
       </div>
       <div class="c-about__right">
         <h1 class="c-title__01">Giới thiệu Công ty</h1>

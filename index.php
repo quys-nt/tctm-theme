@@ -32,7 +32,7 @@
     <div class="l-container">
       <div class="c-about__inner">
         <div class="c-about__left">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-about-01.png" alt="Về chúng tôi">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-showroom-03.jpg" alt="Về chúng tôi">
         </div>
         <div class="c-about__right">
           <h1 class="c-title__01">Về chúng tôi</h1>
@@ -44,7 +44,7 @@
             tối ưu cho người tiêu dùng Việt Nam.
           </p>
           <div class="c-btn__group01">
-            <a href="/gioi-thieu" class="c-btn__01 is-icon">Xem Chi Tiết</a>
+            <a href="<?php echo get_home_url(); ?>/gioi-thieu/" class="c-btn__01 is-icon">Xem Chi Tiết</a>
             <a href="#contact" class="c-btn__01">Liên Hệ</a>
           </div>
         </div>
@@ -78,20 +78,18 @@
   <section class="c-showroom">
     <div class="l-container">
       <div class="c-text--align-center01">
-        <h2 class="c-title__01">Showroom của TCTM</h2>
+        <h2 class="c-title__01">Experience Center</h2>
       </div>
       <div class="c-showroom__inner">
         <div class="c-showroom__item">
           <div class="c-showroom__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-showroom-01.png" alt="Showroom SALA (TP HCM)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-showroom-02.jpg" alt="Experience Center">
           </div>
-          <h3 class="c-showroom__title">Showroom SALA (TP HCM)</h3>
+          <p class="c-showroom__text01">
+            <strong>Địa chỉ:</strong> Số 00.08 Tháp B2, Khu chung cư phức hợp Lô M2 (Sarimi), số 72 Nguyễn Cơ Thạch, P. An Lợi Đông, TP. Thủ Đức, TP. HCM
+          </p>
           <p class="c-showroom__text01"><strong>Tel:</strong> <a href="tel:19001145">19001145</a></p>
           <p class="c-showroom__text01"><strong>Email:</strong> <a href="mailto:info@tctm.com.vn">info@tctm.com.vn</a>
-          </p>
-          <p class="c-showroom__text01">
-            <strong>Địa chỉ:</strong> Số 00.08 Tháp B2, Khu chung cư phức hợp Lô M2 (Sarimi), số 72
-            Nguyễn Cơ Thạch, P. An Lợi Đông, TP. Thủ Đức, TP. HCM
           </p>
           <div class="c-showroom__text01">
             <strong>Thời gian làm việc:</strong>

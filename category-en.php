@@ -35,7 +35,7 @@
     <div class="l-container">
       <div class="c-about__inner">
         <div class="c-about__left">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-about-01.png" alt="About Us">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-showroom-01.png" alt="About Us">
         </div>
         <div class="c-about__right">
           <h1 class="c-title__01">About Us</h1>
