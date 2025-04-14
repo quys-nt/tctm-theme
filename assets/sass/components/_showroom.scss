@@ -40,4 +40,71 @@
       color: #dc3232;
     }
   }
+
+  &__slider {
+    .slick {
+      &-arrow {
+        background: g.$blue01 url('/assets/imgs/icon-arrow-01.svg') no-repeat center center / contain;
+        z-index: 2;
+        opacity: 0.3;
+        border-radius: 2px;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        @media screen and (min-width: 768px) {
+          width: 32px;
+          height: 32px;
+        }
+
+        @include g.media(sp) {
+          display: none;
+        }
+
+        &::before {
+          content: unset;
+        }
+      }
+
+      &-next {
+        right: -15px;
+        transform: translate(0, -50%) rotate(180deg);
+      }
+
+      &-prev {
+        left: -15px;
+      }
+
+      &-dots {
+        bottom: 10px;
+
+        @include g.media(sp) {
+          bottom: 5px;
+        }
+
+        li,
+        button {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+
+        button {
+          background-color: #fff;
+
+          &::before {
+            content: unset;
+          }
+        }
+
+        li.slick-active {
+          button {
+            background-color: g.$blue01
+          }
+        }
+      }
+    }
+  }
 }
