@@ -35,33 +35,45 @@ $vi_url = $urls['vi'];
         </a>
         <?php if ($lang == 'en') { ?>
           <p class="c-footer__text01">
-            CÔNG TY TNHH THƯƠNG MẠI & TIẾP THỊ THÀNH CÔNG<br>
+            <strong>CÔNG TY TNHH THƯƠNG MẠI & TIẾP THỊ THÀNH CÔNG</strong><br>
             <br>
             Address: No. 00.08 Tower B2, Complex Apartment Lot M2 (Sarimi), No. 72 Nguyen Co Thach, An Loi Dong Ward,
             Thu Duc City, HCMC<br>
             <br>
-            Hotline: <a href="tel:19001145" class="c-text__yellow01">19001145</a><br>
+            Hotline: <a href="tel:19001145">19001145</a><br>
             <br>
-            <span class="c-text__yellow01">
+            <span>
               Working hours: Monday - Saturday<br>
               Sunday and holidays closed
             </span>
           </p>
         <?php } else { ?>
           <p class="c-footer__text01">
-            CÔNG TY TNHH THƯƠNG MẠI & TIẾP THỊ THÀNH CÔNG<br>
-            <br>
-            Đ/C: Số 00.08 Tháp B2, Khu chung cư phức hợp Lô M2 (Sarimi), số 72 Nguyễn Cơ Thạch, P. An Lợi Đông,
-            TP. Thủ Đức, TP. HCM<br>
-            <br>
-            Hotline: <a href="tel:19001145" class="c-text__yellow01">19001145</a><br>
-            <br>
-            <span class="c-text__yellow01">
-              Thời gian làm việc: Thứ hai - Thứ bảy<br>
-              Chủ nhật và các ngày lễ nghỉ
-            </span>
+            <strong>CÔNG TY TNHH THƯƠNG MẠI & TIẾP THỊ THÀNH CÔNG</strong>
+          </p>
+          <p class="c-footer__text02">
+            <b>Địa chỉ:</b> Căn số 00.08 Tháp B2, Khu chung cư phức hợp Lô M2 (Sarimi), số 72 Nguyễn Cơ Thạch, P. An Lợi Đông, TP. Thủ Đức, TP. HCM
+          </p>
+          <p class="c-footer__text02">
+            <b>Hotline:</b> <a href="tel:19001145">19001145</a>
+          </p>
+          <p class="c-footer__text02">
+            <b>Email:</b> <a href="mailto:info@tctm.com.vn">info@tctm.com.vn</a>
+          </p>
+          <p class="c-footer__text02">
+            <b>Thời gian làm việc:</b> <br>
+            Thứ hai – Thứ bảy: 08:30 – 17:30<br>
+            Chủ nhật và các ngày lễ nghỉ<br>
           </p>
         <?php } ?>
+        <ul class="c-footer__social02">
+          <li><a href="https://zalo.me/2380433647108267875" target="_blank">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-zalo-02.jpg" alt="icon zalo">
+          </a></li>
+          <li><a href="https://www.linkedin.com/company/thanh-cong-trading-marketing/about/?viewAsMember=true" target="_blank">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/icon-linkedin-01.jpg" alt="icon linkedin">
+          </a></li>
+        </ul>
       </div>
       <div class="c-footer__item c-footer__menu">
         <?php if ($lang == 'en') { ?>

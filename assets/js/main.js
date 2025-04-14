@@ -61,6 +61,16 @@ $(document).ready(function () {
     arrows: true,
   });
 
+  $(".js-slider-show-room").slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    dots: true,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  });
+
   $(".js-btn-show-menu").click(function (e) {
     e.preventDefault();
     $(this).toggleClass("is-active");

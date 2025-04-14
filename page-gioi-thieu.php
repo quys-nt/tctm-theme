@@ -16,10 +16,9 @@
       <div class="c-about__right">
         <h1 class="c-title__01">Giới thiệu Công ty</h1>
         <div class="c-desc__01 c-about__desc">
-          TCTM là một công ty tư nhân có trụ sở chính tại Việt Nam. Sứ mệnh của công ty là cung cấp cho người tiêu
-          dùng Việt Nam các thiết bị gia dụng hàng đầu nhằm nâng cao mức sống. TCTM là đơn vị phân phối chính thức
-          độc quyền tại Việt Nam các sản phẩm mang thương hiệu KDK (Nhật Bản); KadeKa (Nhật Bản) và Bertazzoni
-          (Italia).
+          TCTM là một công ty tư nhân có trụ sở chính tại Việt Nam. Sứ mệnh của chúng tôi là cung cấp cho người tiêu dùng Việt Nam các thiết bị gia dụng hàng đầu nhằm nâng cao mức sống.
+          <br><br>
+          TCTM là đơn vị phân phối chính thức độc quyền tại Việt Nam các sản phẩm mang thương hiệu KDK (Nhật Bản); Kadeka (Nhật Bản), Bertazzoni (Ý), và EuroCave (Pháp),
         </div>
         <div class="c-btn__group01">
           <a href="<?php echo get_home_url(); ?>/lien-he/" class="c-btn__01">Liên Hệ</a>

@@ -5,9 +5,9 @@
       <div class="c-text--align-center01">
         <h2 class="c-title__01">Các Thương Hiệu Đang Phân Phối</h2>
         <p class="c-desc__01">CÔNG TY TNHH THƯƠNG MẠI & TIẾP THỊ THÀNH CÔNG là Nhà phân phối uỷ quyền chính hãng của
-          các Thương hiệu thiết bị cao cấp như KDK - Thương hiệu quạt cao cấp từ Nhật Bản, KAdeKA - Một trong nhưng
+          các Thương hiệu thiết bị cao cấp như KDK - Thương hiệu quạt cao cấp từ Nhật Bản, Kadeka - Một trong nhưng
           đơn vị tiên phong trong ngành công nghiệp tủ ướp và bảo quản vang tại Singapore, Bertazzoni - Thương hiệu
-          thiết bị bếp hơn 140 năm từ Ý, EuroCave - Thương hiệu tủ rượu cao cấp từ Pháp.</p>
+          thiết bị bếp hơn 140 năm từ Ý, Thương hiệu tủ vang và tủ bảo quản Cigar cao cấp từ Pháp.</p>
       </div>
       <div class="c-partner__inner">
         <div class="c-partner__item">

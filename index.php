@@ -38,7 +38,7 @@
           <h1 class="c-title__01">Về chúng tôi</h1>
           <p class="c-desc__01 c-about__desc">
             Công Ty TNHH Thương Mại & Tiếp Thị Thành Công (TCTM) là đơn vị phân phối chính thức các sản phẩm thương
-            hiệu KDK, KADEKA và BERTAZZONI, EUROCAVE cung cấp tại thị trường Việt Nam, bắt đầu từ ngày 1/1/2025.
+            hiệu KDK, Kadeka, Bertazzoni, EuroCave cung cấp tại thị trường Việt Nam, bắt đầu từ ngày 1/1/2025.
             <br><br>
             TCTM hướng đến trở thành đối tác chiến lược hàng đầu, mang đến những sản phẩm chất lượng cao và giải pháp
             tối ưu cho người tiêu dùng Việt Nam.
@@ -82,20 +82,45 @@
       </div>
       <div class="c-showroom__inner">
         <div class="c-showroom__item">
-          <div class="c-showroom__img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-showroom-02.jpg" alt="Experience Center">
+          <div class="c-showroom__slider js-slider-show-room">
+            <div class="c-showroom__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center01.jpg" alt="Experience Center">
+            </div>
+            <div class="c-showroom__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center02.jpg" alt="Experience Center">
+            </div>
+            <div class="c-showroom__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center03.jpg" alt="Experience Center">
+            </div>
+            <div class="c-showroom__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center04.jpg" alt="Experience Center">
+            </div>
+            <div class="c-showroom__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center05.jpg" alt="Experience Center">
+            </div>
+            <div class="c-showroom__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center06.jpg" alt="Experience Center">
+            </div>
+            <div class="c-showroom__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center07.jpg" alt="Experience Center">
+            </div>
+            <div class="c-showroom__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center08.jpg" alt="Experience Center">
+            </div>
+            <div class="c-showroom__img">
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center09.jpg" alt="Experience Center">
+            </div>
           </div>
           <p class="c-showroom__text01">
             <strong>Địa chỉ:</strong> Số 00.08 Tháp B2, Khu chung cư phức hợp Lô M2 (Sarimi), số 72 Nguyễn Cơ Thạch, P. An Lợi Đông, TP. Thủ Đức, TP. HCM
           </p>
-          <p class="c-showroom__text01"><strong>Tel:</strong> <a href="tel:19001145">19001145</a></p>
+          <p class="c-showroom__text01"><strong>Hotline:</strong> <a href="tel:19001145">19001145</a></p>
           <p class="c-showroom__text01"><strong>Email:</strong> <a href="mailto:info@tctm.com.vn">info@tctm.com.vn</a>
           </p>
           <div class="c-showroom__text01">
             <strong>Thời gian làm việc:</strong>
             <p>
-              8:30 – 17.30: Thứ hai - Thứ bảy.<br>
-              Chủ nhật và các ngày lễ nghỉ
+            Thứ hai – Thứ bảy: 08:30 – 17:30
             </p>
           </div>
         </div>

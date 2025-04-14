@@ -22,19 +22,6 @@
       </div>
       <div class="c-contact__inner">
         <div class="c-contact__item">
-          <h3 class="c-title__02 c-contact__title02">CÔNG TY TNHH THƯƠNG MẠI & TIẾP THỊ THÀNH CÔNG</h3>
-          <div class="c-text__white01">
-            <p>
-              Đ/C: Số 00.08 Tháp B2, Khu chung cư phức hợp Lô M2 (Sarimi), số 72 Nguyễn Cơ Thạch, P. An Lợi Đông, TP. Thủ Đức, TP. HCM
-              <br><br>
-              Hotline: 19001145
-              <br><br>
-              Thời gian làm việc: Thứ hai - Thứ bảy<br>
-              Chủ nhật và các ngày lễ nghỉ
-            </p>
-          </div>
-        </div>
-        <div class="c-contact__item">
           <div class="c-contact__form01">
             <?php echo do_shortcode('[contact-form-7 id="b77c7b5" title="Form liên hệ VN"]'); ?>
           </div>
