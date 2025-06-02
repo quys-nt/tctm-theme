@@ -33,10 +33,10 @@
       </div>
       <div class="c-footer__item c-footer__menu">
         <ul>
-          <li><a href="#">Chính sách bảo hành</a></li>
-          <li><a href="#">Tài liệu hướng dẫn sử dụng</a></li>
-          <li><a href="#">Danh sách trung tâm bảo hành</a></li>
-          <li><a href="#">Hướng dẫn lắp đặt sản phẩm</a></li>
+          <li><a href="https://drive.google.com/file/d/1wcZ8qkZvq_BKd43F_m75CRD0SL-ufgMo/view?usp=sharing" target="_blank">Chính sách bảo hành</a></li>
+          <li><a href="https://drive.google.com/file/d/1MDr78VaTS_cL2Hza0dmqUH_uakhkLu7G/view?usp=sharing" target="_blank">Danh sách trung tâm bảo hành</a></li>
+          <li><a href="https://drive.google.com/file/d/1dhCTQAzqGuIoeelOUXwyI9ZB7xxin0WB/view?usp=sharing" target="_blank">Chính sách bảo mật</a></li>
+          <li><a href="https://drive.google.com/file/d/1id_j3csdaarK2aM7RBVmLVfJDNngLmo-/view?usp=sharing" target="_blank">Chính sách đổi hàng</a></li>
         </ul>
       </div>
       <div class="c-footer__item c-footer__menu">
