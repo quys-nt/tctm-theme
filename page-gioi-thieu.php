@@ -46,7 +46,7 @@
 <section class="p-about__misson">
   <div class="l-container">
     <div class="c-text--align-center01">
-      <h2 class="c-title__01">Giá trị cốt lõi trình & Sứ mệnh</h2>
+      <h2 class="c-title__01">Giá trị cốt lõi & Sứ mệnh</h2>
     </div>
 
     <div class="p-about__misson--list">

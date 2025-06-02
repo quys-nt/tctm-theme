@@ -11,12 +11,6 @@
       </div>
       <div class="c-partner__inner">
         <div class="c-partner__item">
-          <a href="https://kdk.com.vn/" target="_blank" rel="noopener noreferrer">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-kdk.png" alt="logo kdk">
-          </a>
-          <h3 class="c-partner__desc">Thương hiệu quạt điện cao cấp hơn 115 năm từ Nhật Bản</h3>
-        </div>
-        <div class="c-partner__item">
           <a href="https://kadeka.com.vn/" target="_blank" rel="noopener noreferrer">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-kadeka.png" alt="logo kadeka">
           </a>
@@ -24,7 +18,13 @@
             vang tại Singapore</h3>
         </div>
         <div class="c-partner__item">
-          <a href="https://universal.bertazzoni.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://kdk.com.vn/" target="_blank" rel="noopener noreferrer">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-kdk.png" alt="logo kdk">
+          </a>
+          <h3 class="c-partner__desc">Thương hiệu quạt điện cao cấp hơn 115 năm từ Nhật Bản</h3>
+        </div>
+        <div class="c-partner__item">
+          <a href="https://vn.bertazzoni.com/" target="_blank" rel="noopener noreferrer">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-bertazzoni.png" alt="logo bertazzoni">
           </a>
           <h3 class="c-partner__desc">Thương hiệu thiết bị bếp cao cấp hơn 140 năm từ Ý</h3>
@@ -33,7 +33,7 @@
           <a href="https://www.eurocave.com.sg/" target="_blank" rel="noopener noreferrer">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/logo-eurocave.png" alt="logo eurocave">
           </a>
-          <h3 class="c-partner__desc">Thương hiệu tủ rượu cao cấp từ Pháp</h3>
+          <h3 class="c-partner__desc">Thương hiệu tủ vang và tủ bảo quản Cigar cao cấp từ Pháp.</h3>
         </div>
       </div>
     </div>

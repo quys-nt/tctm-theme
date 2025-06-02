@@ -1,33 +1,5 @@
-<?php
-$lang_data = get_current_language();
-$lang = $lang_data['short'];
-$lang_full = $lang_data['full'];
-
-// Lấy slug và URL cho hreflang
-$current_path = trim($_SERVER['REQUEST_URI'], '/');
-$is_localhost = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false);
-$prefix = $is_localhost ? 'capital-local/' : '';
-$path = str_replace($prefix, '', $current_path);
-$slug = ($lang == 'en' ? str_replace('en/', '', $path) : $path);
-
-$urls = get_language_urls($slug);
-$en_url = $urls['en'];
-$vi_url = $urls['vi'];
-?>
-<?php
-// $lang_data = get_current_language();
-// $lang = $lang_data['short'];
-// $lang_full = $lang_data['full'];
-
-// $base_url = home_url();
-// $current_path = trim($_SERVER['REQUEST_URI'], '/');
-// $slug = ($lang == 'en' ? str_replace('en/', '', $current_path) : $current_path);
-// $en_url = $base_url . '/en/' . $slug;
-// $vi_url = $base_url . '/' . $slug;
-?>
-
 <!DOCTYPE html>
-<html lang="<?php echo $lang; ?>">
+<html lang="vi">
 
 <head>
   <meta charset="<?php bloginfo('charset'); ?>">
@@ -86,28 +58,21 @@ $vi_url = $urls['vi'];
         </a>
       </div>
       <nav class="c-header__nav js-menu-header">
-        <?php if ($lang == "en") {
-        ?>
-          <ul>
-            <li><a href="<?php echo get_home_url(); ?>/en/about/">About</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/thuong-hieu">Brand</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/en/news/">News</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/en/partner-with-us/">Partner</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/san-pham/">E commerce</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/en/contact/" class="c-header__btn01">Contact</a></li>
-          </ul>
-        <?php
-        } else {
-        ?>
-          <ul>
-            <li><a href="<?php echo get_home_url(); ?>/gioi-thieu/">Về Chúng Tôi</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/thuong-hieu">Thương Hiệu</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/tin-tuc/">Tin tức</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/tro-thanh-doi-tac/">Trở Thành Đối Tác</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/san-pham/">Tài liệu Sản phẩm</a></li>
-            <li><a href="<?php echo get_home_url(); ?>/lien-he/" class="c-header__btn01">Liên Hệ</a></li>
-          </ul>
-        <?php } ?>
+        <ul>
+          <li><a href="<?php echo get_home_url(); ?>/gioi-thieu/">Về Chúng Tôi</a></li>
+          <li><a href="<?php echo get_home_url(); ?>/thuong-hieu">Thương Hiệu</a></li>
+          <li><a href="<?php echo get_home_url(); ?>/tin-tuc/">Tin tức</a></li>
+          <li><a href="https://thanhcong.felixvn.com/cpmTCTM/landing.xhtml" target="_blank">Bảo Hành Điện Tử</a></li>
+          <li>
+            <a href="#">Chính Sách Bảo Hành</a>
+            <ul>
+              <li><a href="https://drive.google.com/file/d/1wcZ8qkZvq_BKd43F_m75CRD0SL-ufgMo/view?usp=drive_link" target="_blank">Chính Sách Bảo Hành</a></li>
+              <li><a href="https://drive.google.com/file/d/1id_j3csdaarK2aM7RBVmLVfJDNngLmo-/view?usp=sharing" target="_blank">Chính Sách Đổi Hàng</a></li>
+            </ul>
+          </li>
+          <li><a href="<?php echo get_home_url(); ?>/san-pham/">Tài liệu Sản phẩm</a></li>
+          <li><a href="<?php echo get_home_url(); ?>/lien-he/" class="c-header__btn01">Liên Hệ</a></li>
+        </ul>
       </nav>
       <a href="#" class="c-header__btn02 js-btn-show-menu">button</a>
     </div>
