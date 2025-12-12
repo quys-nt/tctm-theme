@@ -32,19 +32,46 @@
         </ul>
       </div>
       <div class="c-footer__item c-footer__menu">
-        <ul>
-          <li><a href="https://drive.google.com/file/d/1wcZ8qkZvq_BKd43F_m75CRD0SL-ufgMo/view?usp=sharing" target="_blank">Chính sách bảo hành</a></li>
-          <li><a href="https://drive.google.com/file/d/1MDr78VaTS_cL2Hza0dmqUH_uakhkLu7G/view?usp=sharing" target="_blank">Danh sách trung tâm bảo hành</a></li>
-          <li><a href="https://drive.google.com/file/d/1dhCTQAzqGuIoeelOUXwyI9ZB7xxin0WB/view?usp=sharing" target="_blank">Chính sách bảo mật</a></li>
-          <li><a href="https://drive.google.com/file/d/1id_j3csdaarK2aM7RBVmLVfJDNngLmo-/view?usp=sharing" target="_blank">Chính sách đổi hàng</a></li>
-        </ul>
+        <?php if (have_rows('menu_footer_1', 'option')) : ?>
+          <ul class="footer-menu-1">
+            <?php while (have_rows('menu_footer_1', 'option')) : the_row(); ?>
+              <?php
+              $name = get_sub_field('name_url');
+              $url  = get_sub_field('url');
+              ?>
+              <li>
+                <?php if ($url) : ?>
+                  <a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener">
+                    <?php echo esc_html($name); ?>
+                  </a>
+                <?php else : ?>
+                  <?php echo esc_html($name); ?>
+                <?php endif; ?>
+              </li>
+            <?php endwhile; ?>
+          </ul>
+        <?php endif; ?>
       </div>
       <div class="c-footer__item c-footer__menu">
-        <ul>
-          <li><a href="<?php echo get_home_url(); ?>/san-pham">Sản phẩm</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/lien-he">Liên hệ</a></li>
-          <li><a href="<?php echo get_home_url(); ?>/tro-thanh-doi-tac">Trở thành đối tác</a></li>
-        </ul>
+        <?php if (have_rows('menu_footer_1', 'option')) : ?>
+          <ul class="footer-menu-1">
+            <?php while (have_rows('menu_footer_2', 'option')) : the_row(); ?>
+              <?php
+              $name = get_sub_field('name_url');
+              $url  = get_sub_field('url');
+              ?>
+              <li>
+                <?php if ($url) : ?>
+                  <a href="<?php echo get_home_url() . '/' .  $url; ?>">
+                    <?php echo esc_html($name); ?>
+                  </a>
+                <?php else : ?>
+                  <?php echo esc_html($name); ?>
+                <?php endif; ?>
+              </li>
+            <?php endwhile; ?>
+          </ul>
+        <?php endif; ?>
       </div>
       <div class="c-footer__item">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3919.525718298502!2d106.7242792!3d10.7709886!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317525f607ffc9c5%3A0x397b3d9e65ee1bbe!2sChung%20c%C6%B0%20Sarimi!5e0!3m2!1svi!2s!4v1741539284699!5m2!1svi!2s" width="348" height="296" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
