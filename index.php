@@ -11,16 +11,16 @@
           $imageSP = get_sub_field('slider_img_sp');
           $sliderlink = get_sub_field('link_img');
           ?>
-          <?php if ($sliderlink) :?>
+          <?php if ($sliderlink) : ?>
             <a href="<?php echo $sliderlink ? esc_url($sliderlink) : "#"; ?>" target="_blank">
-          <?php endif ;?>
+            <?php endif; ?>
             <picture>
               <source media="(min-width: 768px)" srcset="<?php echo esc_url($imagePC['url']); ?>">
               <img src="<?php echo $imageSP ? esc_url($imageSP['url']) : esc_url($imagePC['url']); ?>" alt="<?php echo esc_url($imagePC['alt']); ?>">
             </picture>
-          <?php if ($sliderlink) :?>
+            <?php if ($sliderlink) : ?>
             </a>
-          <?php endif ;?>
+          <?php endif; ?>
         <?php endwhile; ?>
       <?php endif; ?>
     </div>
@@ -32,7 +32,16 @@
     <div class="l-container">
       <div class="c-about__inner">
         <div class="c-about__left">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-showroom-03.jpg" alt="Về chúng tôi">
+          <?php if (have_rows('slider_mv_copy', 'option')) : ?>
+            <?php while (have_rows('slider_mv_copy', 'option')) : the_row(); ?>
+              <?php
+              $imagePC = get_sub_field('slider_img');
+              ?>
+              <img src="<?php echo $imageSP ? esc_url($imageSP['url']) : esc_url($imagePC['url']); ?>" alt="<?php echo esc_url($imagePC['alt']); ?>">
+            <?php endwhile; ?>
+          <?php else: ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-showroom-03.jpg" alt="Về chúng tôi">
+          <?php endif; ?>
         </div>
         <div class="c-about__right">
           <h1 class="c-title__01">Về chúng tôi</h1>
@@ -83,33 +92,19 @@
       <div class="c-showroom__inner">
         <div class="c-showroom__item">
           <div class="c-showroom__slider js-slider-show-room">
-            <div class="c-showroom__img">
+
+            <?php if (have_rows('slider_image_showroom', 'option')) : ?>
+              <?php while (have_rows('slider_image_showroom', 'option')) : the_row(); ?>
+                <?php
+                $imagePC = get_sub_field('slider_img');
+                ?>
+                <div class="c-showroom__img">
+                  <img src="<?php echo $imageSP ? esc_url($imageSP['url']) : esc_url($imagePC['url']); ?>" alt="<?php echo esc_url($imagePC['alt']); ?>">
+                </div>
+              <?php endwhile; ?>
+            <?php else: ?>
               <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center01.jpg" alt="Experience Center">
-            </div>
-            <div class="c-showroom__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center02.jpg" alt="Experience Center">
-            </div>
-            <div class="c-showroom__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center03.jpg" alt="Experience Center">
-            </div>
-            <div class="c-showroom__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center04.jpg" alt="Experience Center">
-            </div>
-            <div class="c-showroom__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center05.jpg" alt="Experience Center">
-            </div>
-            <div class="c-showroom__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center06.jpg" alt="Experience Center">
-            </div>
-            <div class="c-showroom__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center07.jpg" alt="Experience Center">
-            </div>
-            <div class="c-showroom__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center08.jpg" alt="Experience Center">
-            </div>
-            <div class="c-showroom__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/imgs/img-experience-center09.jpg" alt="Experience Center">
-            </div>
+            <?php endif; ?>
           </div>
           <p class="c-showroom__text01">
             <strong>Địa chỉ:</strong> Số 00.08 Tháp B2, Khu chung cư phức hợp Lô M2 (Sarimi), số 72 Nguyễn Cơ Thạch, P. An Lợi Đông, TP. Thủ Đức, TP. HCM
@@ -120,7 +115,7 @@
           <div class="c-showroom__text01">
             <strong>Thời gian làm việc:</strong>
             <p>
-            Thứ hai – Thứ bảy: 08:30 – 17:30
+              Thứ hai – Thứ bảy: 08:30 – 17:30
             </p>
           </div>
         </div>
